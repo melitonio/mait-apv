@@ -1,7 +1,6 @@
 using DotNetCore.CAP;
 using MAIT.Interfaces;
 using MAIT.Services;
-using Microsoft.Extensions.Options;
 
 using Events;
 using Interfaces;
@@ -13,14 +12,10 @@ namespace Services;
 public class ApvService : BaseCrudService<ApvService, Apv>, IApvService
 {
     private readonly ICapPublisher _capPublisher;
-    private readonly GqDataDto _gq;
 
-    public ApvService(IDataService srv, ICapPublisher capPublisher, IOptions<GqDataDto> options, ILogger<ApvService> logger) : base(logger, srv)
+    public ApvService(IDataService srv, ICapPublisher capPublisher, ILogger<ApvService> logger) : base(logger, srv)
     {
         _capPublisher = capPublisher;
-        _gq = options.Value;
-
-        _logger.LogInformation("Cargando zonas Postales: {}", _gq.Zonas.Select(a => "\n " + a.ToString()));
 
         OnItemCreated += async (sender, args) =>
         {

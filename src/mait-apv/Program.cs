@@ -29,6 +29,7 @@ builder.Services.Configure<GqDataDto>(builder.Configuration);
 
 builder.Services.AddSingleton<IDataService, DataService<ServiceDbContext>>();
 builder.Services.AddSingleton<IApvService, ApvService>();
+builder.Services.AddSingleton<ZonaPostalService>();
 
 builder.Services.AddDbContext<ServiceDbContext>(options =>
 {

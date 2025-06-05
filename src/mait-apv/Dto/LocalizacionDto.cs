@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dto;
 
-public record GeoJON (PropertiesDto Properties, GeometryDto Geometry,string Type);
+public record GeoJSON (PropertiesDto Properties, GeometryDto Geometry,string Type);
 public record PropertiesDto(string Nombre,string Type);
 public record GeometryDto(IEnumerable<double> Coordinates, string Type);
 
@@ -24,8 +24,8 @@ public record LocalizacionDto
     string Type
 ) : IValidatableObject
 {
-    
-    public GeoJON ToGeoJON()
+    public GeoJSON GeoJSON => ToGeoJON();
+    public GeoJSON ToGeoJON()
     {
         var geometry = new GeometryDto(
             Coordinates: [Longitud, Latitud],
@@ -33,7 +33,7 @@ public record LocalizacionDto
         );
 
         var properties = new PropertiesDto(Nombre, Type);
-        return new GeoJON(properties, geometry, "Feature");
+        return new GeoJSON(properties, geometry, "Feature");
     }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

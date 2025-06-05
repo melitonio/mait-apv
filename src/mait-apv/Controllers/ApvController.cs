@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 namespace Controllers;
 
 
-[Route("[controller]")]
+[Route("apv")]
 [ApiController]
 public partial class ApvController
 (

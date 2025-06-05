@@ -1,6 +1,0 @@
-@MAIT.DocumentSeriesService_HostAddress = http://localhost:5055
-
-GET {{MAIT.DocumentSeriesService_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

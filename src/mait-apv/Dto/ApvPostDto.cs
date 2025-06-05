@@ -27,9 +27,6 @@ public record class ApvPostDto : IPostDto<ApvPostDto, Apv>
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
-        if (Fecha == default)
-        {
-            yield return new ValidationResult("La fecha es obligatoria.", [nameof(Fecha)]);
-        }
+        if (Fecha == default) yield return new("La fecha es obligatoria.", [nameof(Fecha)]);
     }
 }
