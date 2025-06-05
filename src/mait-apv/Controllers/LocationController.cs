@@ -58,7 +58,7 @@ public class LocalizacionController(
                 return new($"El apartado con ID: {apvId} no existe o no coincide con el ID del dto");
             }
 
-            var localizaciones = await _crudService.GetByFilterAsync(x => x.ApvId == apvId);
+            var localizaciones = (await _crudService.GetByFilterAsync(x => x.ApvId == apvId)).ToList();
 
             if (localizaciones.Any(x => x.Nombre == dto.Nombre))
             {
@@ -68,20 +68,22 @@ public class LocalizacionController(
             }
 
             dto.ToEntity(GetUsername(), out var entity);
+            entity.ApvId = apvId;
             if (localizaciones.Count == 0)
             {
                 entity.Activa = true; // Set the first localization as active
+                await OnCreateAsync(entity, dto);
+                return new(true);
             }
             else
             {
+                await OnCreateAsync(entity, dto);
                 foreach (var loc in localizaciones)
                 {
                     loc.Activa = !dto.Activa && loc.Activa; // Set all existing localizations as inactive
                     await _crudService.UpdateItemAsync(loc);
                 }
             }
-            entity.ApvId = apvId;
-            await _crudService.CreateItemAsync(entity);
             return new(true);
         }
         catch (Exception ex)
@@ -115,7 +117,7 @@ public class LocalizacionController(
         {
             _logger.LogError(ex, "Error al agregar localización al apartado con ID: {Id}", apvId);
             Response.StatusCode = StatusCodes.Status400BadRequest;
-            return new("Error al agregar localización al apartado");
+            return new("Error al activar la localización");
         }
     }
 

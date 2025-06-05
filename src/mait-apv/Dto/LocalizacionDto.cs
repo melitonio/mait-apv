@@ -9,6 +9,7 @@ public record GeometryDto(string Type, IEnumerable<double> Coordinatesstring);
 
 public record LocalizacionDto
 (
+    Guid Id,
     string Calle,
     string Numero,
     string Bloque,
@@ -31,6 +32,7 @@ public record LocalizacionDto
     {
         dto = new LocalizacionDto
         (
+            Id: entity.Id,
             Calle: entity.Calle,
             Numero: entity.Numero,
             Bloque: entity.Bloque,
