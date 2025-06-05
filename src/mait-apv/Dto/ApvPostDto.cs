@@ -7,20 +7,19 @@ namespace Dto;
 public record class ApvPostDto : IPostDto<ApvPostDto, Apv>
 {
     public Guid ContactoId { get; init; }
-    public Guid SeriedID { get; set; }              // Serie documental para correspondencia
+    public Guid SeriedID { get; set; }           // Serie documental para correspondencia
     public DateTime Fecha { get; init; }
-    public string? Codigo { get; init; }
     public string? CodigoPostal { get; init; }  // Zona postal para apartados
 
     public bool ToEntity(string usuario, out Apv entity, Guid? id = null)
     {
         entity = new Apv
         {
+            Id = id ?? Guid.NewGuid(),
             Fecha = DateOnly.FromDateTime(Fecha),
-            Codigo = Codigo,
-            ContactoId = ContactoId,
-            SeriedID = SeriedID,
             CodigoPostal = CodigoPostal,
+            ContactoId = ContactoId,
+            SerieId = SeriedID,
         };
         return true;
     }

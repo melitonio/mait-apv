@@ -14,16 +14,16 @@ public class ExpedienteEventHandler(IApvService srv, ILogger<ExpedienteEventHand
     [CapSubscribe(ExpedienteCreadoEvent.Name)]
     public async Task HandleExpedienteCreado(ExpedienteCreadoEvent evt)
     {
-        evt.Dto.ToEntity(evt.User, out var entity, evt.Id);
+        evt.Dto.ToEntity(evt.User, out var apv, evt.Id);
 
-        if (_srv.Exists<Apv>(x => x.Codigo == evt.Dto.Codigo))
-        {
-            _logger.LogWarning("El apv {} ya existe.", entity.Numero);
-            return;
-        }
+        // if (_srv.Exists<Apv>(x => x.Codigo == evt.Dto.id))
+        // {
+        //     _logger.LogWarning("El apv {} ya existe.", apv.Numero);
+        //     return;
+        // }
 
-        await _srv.CreateItemAsync(entity);
-        _logger.LogInformation("Apv creado creado: {}", entity.Numero);
+        await _srv.CreateItemAsync(apv);
+        _logger.LogInformation("Apv creado creado: {}", apv.Numero);
     }
 }
 

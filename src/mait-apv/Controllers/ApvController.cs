@@ -4,7 +4,7 @@ using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Interfaces;
 using MAIT.Interfaces;
-using Microsoft.Extensions.Options;
+using Services;
 
 namespace Controllers;
 
@@ -15,10 +15,32 @@ public partial class ApvController
 (
     IApvService crudService,
     ILogger<ApvController> logger,
-    IOptions<GqDataDto> options
+    ZonaPostalService zonaPostalService
 ) : ApiCrudControllerBase<Apv, ApvPostDto, ApvPutDto, ApvDto>(crudService, logger)
 {
-    private readonly GqDataDto _gqData = options.Value;
+    private readonly ZonaPostalService _zonaPostalService = zonaPostalService;
+
+    protected override Task OnCreateAsync(Apv entity, ApvPostDto dto)
+    {
+        entity.CodigoPostal = dto.CodigoPostal;
+        if (!string.IsNullOrEmpty(entity.CodigoPostal))
+        {
+            var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado la zona postal con el código: {entity.CodigoPostal}");
+        }
+        return base.OnCreateAsync(entity, dto);
+    }
+
+    protected override Task OnUpdateAsync(Apv entity, ApvPutDto dto)
+    {
+        if (!string.IsNullOrEmpty(entity.CodigoPostal))
+        {
+            var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado la zona postal con el código: {entity.CodigoPostal}");
+        }
+        return base.OnUpdateAsync(entity, dto);
+    }
+
 
     [HttpPost("{id}/active")]
     [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]

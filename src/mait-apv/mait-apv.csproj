@@ -14,10 +14,9 @@
     <PackageReference Include="DotNetCore.CAP.rabbitMQ" Version="8.3.3" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
-
-
-    <PackageReference Include="MAIT.DataAccess" Version="2.10.149" />
-    <PackageReference Include="MAIT.Services" Version="2.10.149" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3" />
+    <PackageReference Include="MAIT.DataAccess" Version="2.10.150" />
+    <PackageReference Include="MAIT.Services" Version="2.10.150" />
     
   </ItemGroup>
 

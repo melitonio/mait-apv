@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using MAIT.Interfaces;
-using Dto;
 
 namespace Entities;
 
@@ -14,13 +13,12 @@ public class Apv : BaseApprovable, INumberSequence
 
     [Required]
     public string? Numero { get; set; }
-    public string? Codigo { get; set; }
-    public DateOnly? FechaBaja { get; init; }
-    public string? CodigoPostal { get; init; }      // Zona postal para apartados
+    public DateOnly? FechaBaja { get; set; }
+    public string? CodigoPostal { get; set; }      // Zona postal para apartados
     public Guid ContactoId { get; set; }            // Titular del apartado
-    public Guid SeriedID { get; set; }              // Serie documental para correspondencia
-    public IEnumerable<LocalizacionDto> Localiaciones { get; set; } = [];
+    public Guid SerieId { get; set; }              // Serie documental para correspondencia
+    public IEnumerable<Localizacion> Localiaciones { get; set; } = [];
 
-    public LocalizacionDto? Localizacion => Localiaciones.SingleOrDefault(x => x.Activa);
+    public Localizacion? Localizacion => Localiaciones.SingleOrDefault(x => x.Activa);
     public static string DefaultNumero { get; } = $"apv-{DateTime.Now:yy-MM}-0000000";
 }

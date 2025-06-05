@@ -30,13 +30,14 @@ builder.Services.Configure<GqDataDto>(builder.Configuration);
 builder.Services.AddSingleton<IDataService, DataService<ServiceDbContext>>();
 builder.Services.AddSingleton<IApvService, ApvService>();
 builder.Services.AddSingleton<ZonaPostalService>();
+builder.Services.AddSingleton<LocalizacionService>();
 
 builder.Services.AddDbContext<ServiceDbContext>(options =>
 {
     var config = builder.Configuration.GetSection(nameof(DbOptions)).Get<DbOptions>();
     options.UseNpgsql(config!.ConnectionString);
     var dbContext = new ServiceDbContext((DbContextOptions<ServiceDbContext>)options.Options);
-    dbContext.Database.EnsureCreated(); // Ensure the database is created
+    dbContext.Database.Migrate(); // Ensure the database is created
 });
 
 builder.Services.AddCap(x =>

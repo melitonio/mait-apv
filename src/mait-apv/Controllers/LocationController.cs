@@ -1,94 +1,119 @@
 using Dto;
+using Entities;
 using MAIT.Interfaces;
+using MAIT.Services;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 
 namespace Controllers;
 
-public partial class ApvController
+[ApiController]
+[Route("apv/localizaciones")]
+public class LocalizacionController(
+    IDataService dataService,
+    LocalizacionService srv,
+    ZonaPostalService zonaPostalService,
+    ILogger<LocalizacionController> logger
+) : ApiCrudControllerBase<Localizacion, LocalizacionPostDto, LocalizacionPutDto, LocalizacionDto>(srv, logger)
 {
+    private readonly IDataService _dataService = dataService;
+    private readonly ZonaPostalService _zonaPostalService = zonaPostalService;
 
-    [HttpPost("{id}/locations")]
+
+    protected override Task OnCreateAsync(Localizacion entity, LocalizacionPostDto dto)
+    {
+        entity.CodigoPostal = dto.CodigoPostal;
+        if (!string.IsNullOrEmpty(entity.CodigoPostal))
+        {
+            var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado el código postal: {entity.CodigoPostal}");
+        }
+        return base.OnCreateAsync(entity, dto);
+    }
+
+
+    protected override Task OnUpdateAsync(Localizacion entity, LocalizacionPutDto dto)
+    {
+        entity.CodigoPostal = dto.CodigoPostal;
+        if (!string.IsNullOrEmpty(entity.CodigoPostal))
+        {
+            var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado el código postal: {entity.CodigoPostal}");
+        }
+        return base.OnUpdateAsync(entity, dto);
+    }
+
+
+    [HttpPost("{apvId}/locations")]
     [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ResultModel<bool>> SetLocalization(Guid id, LocalizacionDto dto)
+    public async Task<ResultModel<bool>> SetLocalization(Guid apvId, LocalizacionPostDto dto)
     {
         try
         {
-            var entity = await _crudService.GetByIdAsync(id);
-            if (entity == default)
-            {
-                Response.StatusCode = StatusCodes.Status404NotFound;
-                _logger.LogWarning("No se ha encontrado el apartado con ID: {Id}", id);
-                return new($"No se ha encontrado el apartado con ID: {id}");
-            }
-
-            if (entity.Localiaciones.Any(x => x.Nombre == dto.Nombre))
+            if (!_dataService.Exists<Apv>(x => x.Id == apvId))
             {
                 Response.StatusCode = StatusCodes.Status400BadRequest;
-                _logger.LogWarning("La localización '{Nombre}' ya existe en el apartado con ID: {Id}", dto.Nombre, id);
-                return new($"La localización '{dto.Nombre}' ya existe en el apartado con ID: {id}");
+                _logger.LogWarning("El apartado con ID: {Id} no existe o no coincide con el ID del dto", apvId);
+                return new($"El apartado con ID: {apvId} no existe o no coincide con el ID del dto");
             }
 
-            if (!entity.Localiaciones.Any())
+            var localizaciones = await _crudService.GetByFilterAsync(x => x.ApvId == apvId);
+
+            if (localizaciones.Any(x => x.Nombre == dto.Nombre))
             {
-                entity.Localiaciones = [dto with { Activa = true }];
+                Response.StatusCode = StatusCodes.Status400BadRequest;
+                _logger.LogWarning("La localización '{Nombre}' ya existe en el apartado con ID: {Id}", dto.Nombre, apvId);
+                return new($"La localización '{dto.Nombre}' ya existe en el apartado con ID: {apvId}");
+            }
+
+            dto.ToEntity(GetUsername(), out var entity);
+            if (localizaciones.Count == 0)
+            {
+                entity.Activa = true; // Set the first localization as active
             }
             else
             {
-                entity.Localiaciones = dto.Activa ?
-                [.. entity.Localiaciones.Select(x => x with { Activa = false }), dto]
-                : [.. entity.Localiaciones, dto];
+                foreach (var loc in localizaciones)
+                {
+                    loc.Activa = !dto.Activa && loc.Activa; // Set all existing localizations as inactive
+                    await _crudService.UpdateItemAsync(loc);
+                }
             }
-
-            entity.UpdatedBy = GetUsername();
-            await _crudService.UpdateItemAsync(entity);
+            entity.ApvId = apvId;
+            await _crudService.CreateItemAsync(entity);
             return new(true);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error al agregar localización al apartado con ID: {Id}", id);
+            _logger.LogError(ex, "Error al agregar localización al apartado con ID: {Id}", apvId);
             Response.StatusCode = StatusCodes.Status400BadRequest;
             return new("Error al agregar localización al apartado");
         }
     }
 
 
-    [HttpPost("{id}/locations/{nombre}/active")]
+    [HttpPost("{apvId}/locations/{nombre}/active")]
     [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ResultModel<bool>> ActiveLocalization(Guid id, string nombre)
+    public async Task<ResultModel<bool>> ActiveLocalization(Guid apvId, string nombre)
     {
         try
         {
-            var entity = await _crudService.GetByIdAsync(id);
-            if (entity == default)
+            var loc = await _crudService.GetSingleByFilterAsync(x => x.ApvId == apvId && x.Nombre == nombre);
+            if (loc == null)
             {
                 Response.StatusCode = StatusCodes.Status404NotFound;
-                _logger.LogWarning("No se ha encontrado el apartado con ID: {Id}", id);
-                return new($"No se ha encontrado el apartado con ID: {id}");
+                _logger.LogWarning("No se ha encontrado la localización '{Nombre}' en el apartado con ID: {Id}", nombre, apvId);
+                return new($"No se ha encontrado la localización '{nombre}' en el apartado con ID: {apvId}");
             }
-
-            if (!entity.Localiaciones.Any(x => x.Nombre == nombre))
-            {
-                Response.StatusCode = StatusCodes.Status400BadRequest;
-                _logger.LogWarning("La localización '{Nombre}' no existe en el apartado con ID: {Id}", nombre, id);
-                return new($"La localización '{nombre}' no existe en el apartado con ID: {id}");
-            }
-            else
-            {
-                entity.Localiaciones = [.. entity.Localiaciones.Select(x =>
-                    x.Nombre == nombre
-                        ? x  with { Activa = true }
-                        : x with { Activa = false } )];
-            }
-
-            entity.UpdatedBy = GetUsername();
-            await _crudService.UpdateItemAsync(entity);
+            loc.Activa = true; // Set the specified localization as active
+            await _crudService.UpdateItemAsync(loc);
             return new(true);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error al agregar localización al apartado con ID: {Id}", id);
+            _logger.LogError(ex, "Error al agregar localización al apartado con ID: {Id}", apvId);
             Response.StatusCode = StatusCodes.Status400BadRequest;
             return new("Error al agregar localización al apartado");
         }
