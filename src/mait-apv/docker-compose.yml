@@ -2,21 +2,21 @@
 services:
 
   # Microservicio de almacenamiento
-  document-serie:
+  apv:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: contacts
-    image: mait-contacts:latest
+    container_name: apv
+    image: mait-apv:latest
     ports:
       - "5014:8080"
 
     environment:
       # Base de datos
-      - AppDbContextFactoryOptions__ConnectionString=host = host.docker.internal; Database = contacts;  username = postgres; Password = malabo-2530;
-      - AppDbContextFactoryOptions__TypeDb=Postgres
-      - AppDbContextFactoryOptions__ConnectionStringBk=host = host.docker.internal; Database = contacts-bk;  username = postgres; Password = malabo-2530;
-      - AppDbContextFactoryOptions__TypeDbBk=Postgres
+      - DbOptions__ConnectionString=host = host.docker.internal; Database = apv-db;  username = postgres; Password = malabo-2530;
+      - DbOptions__TypeDb=Postgres
+      - DbOptions__ConnectionStringBk=host = host.docker.internal; Database = apv-bk;  username = postgres; Password = malabo-2530;
+      - DbOptions__TypeDbBk=Postgres
       
       - RabbitMQOptions__HostName=host.docker.internal
       - RabbitMQOptions__Port=5672

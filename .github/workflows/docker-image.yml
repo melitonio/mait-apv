@@ -24,9 +24,9 @@ jobs:
       # Paso 5: Construir la imagen Docker del Backend
       - name: Build Service Docker image
         run: |
-          docker build -t melitonio/contacts:latest ./src/MAIT.Contacts
+          docker build -t melitonio/apv:latest ./src/mait-apv
 
       # Paso 6: Subir la imagen del Backend a Docker Hub
       - name: Push Service Docker image
         run: |
-          docker push melitonio/contacts:latest
+          docker push melitonio/apv:latest
