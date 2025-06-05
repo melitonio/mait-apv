@@ -1,0 +1,801 @@
+{
+  "Pais": "Guinea Ecuatorial",
+  "Codigo": "GQ",
+  "Zonas": [
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Acurenam",
+      "Codigo": "0100"
+    },
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0107"
+    },
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0108"
+    },
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0109"
+    },
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Akelayong-Mbam",
+      "Codigo": "0110"
+    },
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Ayem",
+      "Codigo": "0120"
+    },
+    {
+      "Distrito": "Acurenam",
+      "Zona": "Mefub",
+      "Codigo": "0130"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Akonibe",
+      "Codigo": "0200"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0207"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0208"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0209"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Bisobinam",
+      "Codigo": "0210"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Evordulu",
+      "Codigo": "0220"
+    },
+    {
+      "Distrito": "Akonibe",
+      "Zona": "Kukumankok",
+      "Codigo": "0230"
+    },
+    {
+      "Distrito": "Annobón",
+      "Zona": "Annobón",
+      "Codigo": "0300"
+    },
+    {
+      "Distrito": "Annobón",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0307"
+    },
+    {
+      "Distrito": "Annobón",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0308"
+    },
+    {
+      "Distrito": "Annobón",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0309"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Añisok",
+      "Codigo": "0400"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0407"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0408"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0409"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Angonoweñ",
+      "Codigo": "0410"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Ayene-A",
+      "Codigo": "0420"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Bibara",
+      "Codigo": "0430"
+    },
+    {
+      "Distrito": "Añisok",
+      "Zona": "Milong",
+      "Codigo": "0440"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Baney",
+      "Codigo": "0500"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0507"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0508"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0509"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Bariboe",
+      "Codigo": "0510"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Basakato del Este",
+      "Codigo": "0520"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Bososo",
+      "Codigo": "0530"
+    },
+    {
+      "Distrito": "Baney",
+      "Zona": "Rebola",
+      "Codigo": "0540"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Bata",
+      "Codigo": "0600"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0607"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0608"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0609"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Lia",
+      "Codigo": "0610"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Machinda",
+      "Codigo": "0615"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Miboman",
+      "Codigo": "0625"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Mocomo",
+      "Codigo": "0635"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Ncoantoma",
+      "Codigo": "0645"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Ndjiacom",
+      "Codigo": "0655"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Ngolo",
+      "Codigo": "0660"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Rio Campo",
+      "Codigo": "0670"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Udubuandjolo",
+      "Codigo": "0680"
+    },
+    {
+      "Distrito": "Bata",
+      "Zona": "Ukomba",
+      "Codigo": "0690"
+    },
+    {
+      "Distrito": "Djibloho",
+      "Zona": "Djibloho",
+      "Codigo": "0700"
+    },
+    {
+      "Distrito": "Djibloho",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0707"
+    },
+    {
+      "Distrito": "Djibloho",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0708"
+    },
+    {
+      "Distrito": "Djibloho",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0709"
+    },
+    {
+      "Distrito": "Djibloho",
+      "Zona": "Mebere",
+      "Codigo": "0710"
+    },
+    {
+      "Distrito": "Djibloho",
+      "Zona": "Oyala",
+      "Codigo": "0720"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Ebebiyin",
+      "Codigo": "0800"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0807"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0808"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0809"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Bidjabidjan",
+      "Codigo": "0810"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Eteg-Vefí",
+      "Codigo": "0820"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Okong-Oyec",
+      "Codigo": "0830"
+    },
+    {
+      "Distrito": "Ebebiyin",
+      "Zona": "Ongoma",
+      "Codigo": "0840"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Evinayong",
+      "Codigo": "0900"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "0907"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "0908"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Apartados Particulares",
+      "Codigo": "0909"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Adjelon",
+      "Codigo": "0910"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Bicurga",
+      "Codigo": "0920"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Ebolowa",
+      "Codigo": "0930"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Misión San José",
+      "Codigo": "0940"
+    },
+    {
+      "Distrito": "Evinayong",
+      "Zona": "Teguete",
+      "Codigo": "0950"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Kogo",
+      "Codigo": "1000"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1007"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1008"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1009"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Bogo",
+      "Codigo": "1010"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Cabo San Juan",
+      "Codigo": "1020"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Corisco",
+      "Codigo": "1030"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Mbañe",
+      "Codigo": "1040"
+    },
+    {
+      "Distrito": "Kogo",
+      "Zona": "Mibonde-Elon",
+      "Codigo": "1050"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Luba",
+      "Codigo": "1100"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1107"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1108"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1109"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Basakato del Oeste",
+      "Codigo": "1110"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Batete",
+      "Codigo": "1120"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Moca",
+      "Codigo": "1130"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Moeri",
+      "Codigo": "1140"
+    },
+    {
+      "Distrito": "Luba",
+      "Zona": "Musola",
+      "Codigo": "1150"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Malabo",
+      "Codigo": "1200"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1207"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1208"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1209"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Amilivia-La Paz",
+      "Codigo": "1210"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Banapa",
+      "Codigo": "1220"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Basupu del Oeste",
+      "Codigo": "1230"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Batoicopo",
+      "Codigo": "1235"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Ela-Nguema",
+      "Codigo": "1240"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Lampert-San Valentín",
+      "Codigo": "1250"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Malabo II-M",
+      "Codigo": "1260"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Sacriba",
+      "Codigo": "1270"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Santa María",
+      "Codigo": "1280"
+    },
+    {
+      "Distrito": "Malabo",
+      "Zona": "Sipopo",
+      "Codigo": "1290"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Mbini",
+      "Codigo": "1300"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1307"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1308"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1309"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Akanabor",
+      "Codigo": "1310"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Bitika",
+      "Codigo": "1320"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Handje",
+      "Codigo": "1330"
+    },
+    {
+      "Distrito": "Mbini",
+      "Zona": "Mitom",
+      "Codigo": "1340"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Micomiseng",
+      "Codigo": "1400"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1407"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1408"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1409"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Akok-Esabok",
+      "Codigo": "1410"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Ayak-Ntangan",
+      "Codigo": "1420"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Beayop",
+      "Codigo": "1430"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Nkue",
+      "Codigo": "1440"
+    },
+    {
+      "Distrito": "Micomiseng",
+      "Zona": "Nsang",
+      "Codigo": "1450"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Mongomo",
+      "Codigo": "1500"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1507"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1508"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1509"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Ebang",
+      "Codigo": "1510"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Mebam",
+      "Codigo": "1520"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Mongomeyen",
+      "Codigo": "1530"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Nsang-Ayong",
+      "Codigo": "1540"
+    },
+    {
+      "Distrito": "Mongomo",
+      "Zona": "Oveng",
+      "Codigo": "1550"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Niefang",
+      "Codigo": "1600"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1607"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1608"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1609"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Andom",
+      "Codigo": "1610"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Ayene-N",
+      "Codigo": "1620"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Miyobo",
+      "Codigo": "1630"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Nkimi",
+      "Codigo": "1640"
+    },
+    {
+      "Distrito": "Niefang",
+      "Zona": "Nkumeñkíen",
+      "Codigo": "1650"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Nsok-Nsomo",
+      "Codigo": "1700"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1707"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1708"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1709"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Abiara",
+      "Codigo": "1710"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Andom-Ovang",
+      "Codigo": "1720"
+    },
+    {
+      "Distrito": "Nsok-Nsomo",
+      "Zona": "Menduma",
+      "Codigo": "1730"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Nsork",
+      "Codigo": "1800"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1807"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1808"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1809"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Abumeyem",
+      "Codigo": "1810"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Dumu",
+      "Codigo": "1820"
+    },
+    {
+      "Distrito": "Nsork",
+      "Zona": "Nvom",
+      "Codigo": "1830"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Riaba",
+      "Codigo": "1900"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Correspondencia Oficial",
+      "Codigo": "1907"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Corporaciones Locales",
+      "Codigo": "1908"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Apartados Particulares",
+      "Codigo": "1909"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Baho-Grande",
+      "Codigo": "1910"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Ehoco",
+      "Codigo": "1920"
+    },
+    {
+      "Distrito": "Riaba",
+      "Zona": "Maule",
+      "Codigo": "1930"
+    }
+  ]
+}

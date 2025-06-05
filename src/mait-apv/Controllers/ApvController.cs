@@ -1,0 +1,122 @@
+using MAIT.Services;
+using Dto;
+using Entities;
+using Microsoft.AspNetCore.Mvc;
+using Interfaces;
+using MAIT.Interfaces;
+using Microsoft.Extensions.Options;
+
+namespace Controllers;
+
+
+[Route("[controller]")]
+[ApiController]
+public partial class ApvController
+(
+    IApvService crudService,
+    ILogger<ApvController> logger,
+    IOptions<GqDataDto> options
+) : ApiCrudControllerBase<Apv, ApvPostDto, ApvPutDto, ApvDto>(crudService, logger)
+{
+    private readonly GqDataDto _gqData = options.Value;
+
+    [HttpPost("{id}/active")]
+    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ResultModel<bool>> Activate(Guid id)
+    {
+        try
+        {
+            var entity = await _crudService.GetByIdAsync(id);
+            if (entity == default)
+            {
+                Response.StatusCode = StatusCodes.Status404NotFound;
+                _logger.LogWarning("No se ha encontrado el apartado con ID: {Id}", id);
+                return new($"No se ha encontrado el apartado con ID: {id}");
+            }
+            if (entity.IsActive)
+            {
+                Response.StatusCode = StatusCodes.Status400BadRequest;
+                _logger.LogWarning("El apartado con ID: {Id} ya está activo.", id);
+                return new($"El apartado con ID: {id} ya está activo.");
+            }
+            entity.Activate(GetUsername());
+            await _crudService.UpdateItemAsync(entity);
+            return new(true);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error al activar el apartado con ID: {Id}", id);
+            Response.StatusCode = StatusCodes.Status400BadRequest;
+            return new("Error al activar el apartado");
+        }
+    }
+
+
+    [HttpPost("{id}/suspend")]
+    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ResultModel<bool>> Suspend(Guid id)
+    {
+        try
+        {
+            var entity = await _crudService.GetByIdAsync(id);
+            if (entity == default)
+            {
+                Response.StatusCode = StatusCodes.Status404NotFound;
+                _logger.LogWarning("No se ha encontrado el apartado con ID: {Id}", id);
+                return new($"No se ha encontrado el apartado con ID: {id}");
+            }
+            if (entity.IsSuspended)
+            {
+                Response.StatusCode = StatusCodes.Status400BadRequest;
+                _logger.LogWarning("El apartado con ID: {Id} ya está suspendido", id);
+                return new($"El apartado con ID: {id} ya está suspendido");
+            }
+            entity.Suspend(GetUsername());
+            await _crudService.UpdateItemAsync(entity);
+            return new(true);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error al suspender el apartado con ID: {Id}", id);
+            Response.StatusCode = StatusCodes.Status400BadRequest;
+            return new("Error al suspender el apartado");
+        }
+    }
+
+
+    [HttpPost("{id}/aprove")]
+    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ResultModel<bool>> Aprove(Guid id)
+    {
+        try
+        {
+            var entity = await _crudService.GetByIdAsync(id);
+            if (entity == default)
+            {
+                Response.StatusCode = StatusCodes.Status404NotFound;
+                _logger.LogWarning("No se ha encontrado el apartado con ID: {Id}", id);
+                return new($"No se ha encontrado el apartado con ID: {id}");
+            }
+
+            if (entity.IsApproved == true)
+            {
+                Response.StatusCode = StatusCodes.Status400BadRequest;
+                _logger.LogWarning("El apartado con ID: {Id} ya está aprobado", id);
+                return new($"El apartado con ID: {id} ya está aprobado");
+            }
+            entity.Approve(GetUsername());
+            await _crudService.UpdateItemAsync(entity);
+            return new(true);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error al aprobar el apartado con ID: {Id}", id);
+            Response.StatusCode = StatusCodes.Status400BadRequest;
+            return new("Error al aprobar el apartado");
+        }
+    }
+
+}
