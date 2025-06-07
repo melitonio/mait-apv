@@ -48,7 +48,7 @@ public class EndpointTests(CustomWebApplicationFactory<Program> factory)
 
             // Assert
             getResult.Should().NotBeNull();
-            getResult!.Data!.CodigoPostal.Should().Be(item.Codigo);
+            getResult!.Data!.CodigoPostal.Should().Be(item.CodigoPostal);
             ids.Add(id);
         }
 

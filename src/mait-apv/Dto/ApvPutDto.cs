@@ -4,7 +4,7 @@ using Entities;
 
 namespace Dto;
 
-public record class ApvPutDto : IPutDto<ApvPutDto, Apv>
+public record class ApvPutDto : IPutDto<Apv>
 {
     public Guid Id { get; set; }
     public Guid ContactoId { get; set; }

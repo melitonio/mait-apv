@@ -20,9 +20,8 @@ public record class LocalizacionPutDto
     string Nombre, // nombre de la dirección, por ejemplo: "Oficina Central", "Almacén Principal", etc.
     string Tipo,
     Guid ApvId // Identificador del apartado al que pertenece esta localización
-) : IPutDto<LocalizacionPutDto, Localizacion>, IValidatableObject
+) : IPutDto<Localizacion>, IValidatableObject
 {
-
     public void UpdateEntity(in Localizacion entity, string usuario)
     {
         entity.Calle = Calle;

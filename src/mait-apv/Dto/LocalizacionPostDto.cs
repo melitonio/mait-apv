@@ -19,7 +19,7 @@ public record class LocalizacionPostDto
     double Longitud,
     string Nombre, // nombre de la dirección, por ejemplo: "Oficina Central", "Almacén Principal", etc.
     string Tipo
-) : IPostDto<LocalizacionPostDto, Localizacion>, IValidatableObject
+) : IPostDto<Localizacion>, IValidatableObject
 {
     public bool ToEntity(string usuario, out Localizacion entity, Guid? id = null)
     {
@@ -42,6 +42,12 @@ public record class LocalizacionPostDto
             CreatedBy = usuario,
         };
         return true;
+    }
+
+    public Localizacion ToEntity(string usuario, Guid? id = null)
+    {
+        ToEntity(usuario, out var entity, id);
+        return entity;
     }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

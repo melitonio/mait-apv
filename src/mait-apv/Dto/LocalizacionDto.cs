@@ -24,30 +24,35 @@ public record LocalizacionDto
     string Nombre, // nombre de la dirección, por ejemplo: "Oficina Central", "Almacén Principal", etc.
     string Type,
     Guid ApvId = default // Identificador del apartado al que pertenece esta localización
-) : IGetDto<LocalizacionDto, Localizacion>
+) : IGetDto<Localizacion>
 {
     public GeoJSON GeoJSON => new("Feature", new(Nombre, Type), new("Point", [Longitud, Latitud]));
 
-    public static bool FromEntity(Localizacion entity, out LocalizacionDto dto)
+    public static bool FromEntity<TDto>(Localizacion entity, out TDto dto) where TDto : IGetDto<Localizacion>
     {
-        dto = new LocalizacionDto
-        (
-            Id: entity.Id,
-            Calle: entity.Calle,
-            Numero: entity.Numero,
-            Bloque: entity.Bloque,
-            Portal: entity.Portal,
-            Escalera: entity.Escalera,
-            Piso: entity.Piso,
-            CodigoPostal: entity.CodigoPostal,
-            Descripcion: entity.Descripcion ?? string.Empty,
-            Activa: entity.Activa,
-            Latitud: entity.Latitud,
-            Longitud: entity.Longitud,
-            Nombre: entity.Nombre,
-            Type: entity.Tipo,
-            ApvId: entity.ApvId
-        );
+        dto = (TDto)FromEntity(entity);
         return true;
+    }
+
+    public static IGetDto<Localizacion> FromEntity(Localizacion entity)
+    {
+        return new LocalizacionDto
+                (
+                    Id: entity.Id,
+                    Calle: entity.Calle,
+                    Numero: entity.Numero,
+                    Bloque: entity.Bloque,
+                    Portal: entity.Portal,
+                    Escalera: entity.Escalera,
+                    Piso: entity.Piso,
+                    CodigoPostal: entity.CodigoPostal,
+                    Descripcion: entity.Descripcion ?? string.Empty,
+                    Activa: entity.Activa,
+                    Latitud: entity.Latitud,
+                    Longitud: entity.Longitud,
+                    Nombre: entity.Nombre,
+                    Type: entity.Tipo,
+                    ApvId: entity.ApvId
+                );
     }
 }

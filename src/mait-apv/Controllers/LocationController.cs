@@ -121,4 +121,22 @@ public class LocalizacionController(
         }
     }
 
+    [HttpGet("{apvId}/locations")]
+    [ProducesResponseType(typeof(ResultModel<IEnumerable<LocalizacionDto>>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ResultModel<IEnumerable<LocalizacionDto>>> GetByApv(Guid apvId)
+    {
+        try
+        {
+            var locs = await _crudService.GetByFilterAsync(x => x.ApvId == apvId);
+            return new(locs.Select(x => LocalizacionDto.FromEntity(x, out LocalizacionDto dto) ? dto : throw new($"Error al convertir la entidad {x.Id} a DTO")));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error al agregar localización al apartado con ID: {Id}", apvId);
+            Response.StatusCode = StatusCodes.Status400BadRequest;
+            return new("Error al activar la localización");
+        }
+    }
+
 }

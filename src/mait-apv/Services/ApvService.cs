@@ -19,21 +19,21 @@ public class ApvService : BaseCrudService<ApvService, Apv>, IApvService
 
         OnItemCreated += async (sender, args) =>
         {
-            ApvDto.FromEntity(args, out var dto);
+            ApvDto.FromEntity(args, out ApvDto dto);
             var evt = new ApvCreadoEvent(args.Id, args.CreatedBy!, dto);
             await _capPublisher.PublishAsync(ApvCreadoEvent.Name, evt);
         };
 
         OnItemUpdated += async (sender, args) =>
         {
-            ApvDto.FromEntity(args, out var dto);
+            ApvDto.FromEntity(args, out ApvDto dto);
             var evt = new ApvActualizadoEvent(args.Id, args.UpdatedBy!, dto);
             await _capPublisher.PublishAsync(ApvActualizadoEvent.Name, evt);
         };
 
         OnItemDeleted += async (sender, args) =>
         {
-            ApvDto.FromEntity(args, out var dto);
+            ApvDto.FromEntity(args, out ApvDto dto);
             var evt = new ApvElimidadoEvent(args.Id, GetUsername(), dto);
             await _capPublisher.PublishAsync(ApvElimidadoEvent.Name, evt);
         };
