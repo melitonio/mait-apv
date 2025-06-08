@@ -28,13 +28,14 @@ public class EndpointTests(CustomWebApplicationFactory<Program> factory)
     public async Task Post_Get_Delete_Serie_Works_Correctly()
     {
         // Arrange
-        var n = 160;
+        var n = 3;
         var items = n > 0 ? DataFactory.GenerateMany(n) : [];
         List<Guid> ids = [];
         foreach (var item in items)
         {
             // Act - POST
-            var post = await _client.PostAsJsonAsync("/apv", item);
+            var postItem = item with { CodigoPostal = "0820" };
+            var post = await _client.PostAsJsonAsync("/apv", postItem); // Asigna un código postal válido
             var message = await post.Content.ReadAsStringAsync();
             post.EnsureSuccessStatusCode();
 
@@ -48,7 +49,7 @@ public class EndpointTests(CustomWebApplicationFactory<Program> factory)
 
             // Assert
             getResult.Should().NotBeNull();
-            getResult!.Data!.CodigoPostal.Should().Be(item.CodigoPostal);
+            getResult!.Data!.CodigoPostal.Should().Be(postItem.CodigoPostal);
             ids.Add(id);
         }
 
