@@ -12,8 +12,8 @@ using Persistence;
 namespace maitapv.Migrations
 {
     [DbContext(typeof(ServiceDbContext))]
-    [Migration("20250605170918_m001")]
-    partial class m001
+    [Migration("20250609073843_M00")]
+    partial class M00
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -206,7 +206,7 @@ namespace maitapv.Migrations
                     b.HasIndex("ApvId", "Nombre")
                         .IsUnique();
 
-                    b.ToTable("Localizaciones");
+                    b.ToTable("Localizacion");
                 });
 
             modelBuilder.Entity("Entities.Localizacion", b =>

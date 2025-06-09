@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using MAIT.DataAccess;
 using Persistence;
 using MAIT.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Integration;
 
@@ -20,8 +21,8 @@ public abstract class IntegrationTestBase(CustomWebApplicationFactory<Program> f
         Scope = Factory.Services.CreateScope();
         var srv = (DataService<ServiceDbContext>)Scope.ServiceProvider.GetRequiredService<IDataService>();
         Db = srv.DbFactory.CreateDbContext();
-     //   await Db.Database.EnsureDeletedAsync();
-    //    await Db.Database.EnsureCreatedAsync();
+        await Db.Database.EnsureDeletedAsync();
+        await Db.Database.MigrateAsync();
         if (UseTransaction)
             _transaction = await Db.Database.BeginTransactionAsync();
 

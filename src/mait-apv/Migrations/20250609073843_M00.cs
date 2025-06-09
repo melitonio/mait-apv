@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace maitapv.Migrations
 {
     /// <inheritdoc />
-    public partial class m001 : Migration
+    public partial class M00 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,7 +52,7 @@ namespace maitapv.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Localizaciones",
+                name: "Localizacion",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -79,9 +79,9 @@ namespace maitapv.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Localizaciones", x => x.Id);
+                    table.PrimaryKey("PK_Localizacion", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Localizaciones_Apv_ApvId",
+                        name: "FK_Localizacion_Apv_ApvId",
                         column: x => x.ApvId,
                         principalTable: "Apv",
                         principalColumn: "Id",
@@ -89,8 +89,8 @@ namespace maitapv.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Localizaciones_ApvId_Nombre",
-                table: "Localizaciones",
+                name: "IX_Localizacion_ApvId_Nombre",
+                table: "Localizacion",
                 columns: new[] { "ApvId", "Nombre" },
                 unique: true);
         }
@@ -99,7 +99,7 @@ namespace maitapv.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Localizaciones");
+                name: "Localizacion");
 
             migrationBuilder.DropTable(
                 name: "Apv");

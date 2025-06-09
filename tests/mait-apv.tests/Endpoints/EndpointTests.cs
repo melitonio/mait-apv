@@ -28,7 +28,7 @@ public class EndpointTests(CustomWebApplicationFactory<Program> factory)
     public async Task Post_Get_Delete_Serie_Works_Correctly()
     {
         // Arrange
-        var n = 3;
+        var n = 6;
         var items = n > 0 ? DataFactory.GenerateMany(n) : [];
         List<Guid> ids = [];
         foreach (var item in items)

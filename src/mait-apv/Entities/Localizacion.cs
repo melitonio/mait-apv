@@ -3,6 +3,7 @@ using MAIT.Interfaces;
 
 namespace Entities;
 
+[Table(nameof(Localizacion))]
 public class Localizacion : BaseEntity
 {
     public string Calle { get; set; } = string.Empty;

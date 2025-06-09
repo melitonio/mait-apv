@@ -203,7 +203,7 @@ namespace maitapv.Migrations
                     b.HasIndex("ApvId", "Nombre")
                         .IsUnique();
 
-                    b.ToTable("Localizaciones");
+                    b.ToTable("Localizacion");
                 });
 
             modelBuilder.Entity("Entities.Localizacion", b =>
