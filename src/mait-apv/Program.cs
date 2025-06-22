@@ -19,6 +19,7 @@ builder.Logging.AddSimpleConsole(options =>
     options.ColorBehavior = Microsoft.Extensions.Logging.Console.LoggerColorBehavior.Enabled;
 });
 
+builder.Services.AddHealthChecks();
 builder.Services.Configure<DbOptions>(builder.Configuration.GetSection(nameof(DbOptions)));
 
 // 1. Lee Data/GQ.json como fuente de configuración
@@ -36,20 +37,18 @@ builder.Services.AddDbContext<ServiceDbContext>(options =>
 {
     var config = builder.Configuration.GetSection(nameof(DbOptions)).Get<DbOptions>();
     options.UseNpgsql(config!.ConnectionString);
-    var dbContext = new ServiceDbContext((DbContextOptions<ServiceDbContext>)options.Options);
-    dbContext.Database.Migrate(); // Ensure the database is created
 });
 
 builder.Services.AddCap(x =>
 {
     x.UseEntityFramework<ServiceDbContext>();
-    x.UseRabbitMQ(o =>
+    var rab = builder.Configuration.GetSection(nameof(RabbitMQOptions)).Get<RabbitMQOptions>();
+    x.UseRabbitMQ(rabbitMqOptions =>
     {
-        var config = builder.Configuration.GetSection(nameof(RabbitMQOptions)).Get<RabbitMQOptions>();
-        o.HostName = config!.HostName;
-        o.UserName = config.UserName;
-        o.Password = config.Password;
-        o.VirtualHost = config.VirtualHost;
+        rabbitMqOptions.HostName = rab!.HostName;
+        rabbitMqOptions.UserName = rab.UserName;
+        rabbitMqOptions.Password = rab.Password;
+        rabbitMqOptions.VirtualHost = rab.VirtualHost;
     });
     x.UseDashboard(); // opcional para ver /cap
 });
@@ -91,6 +90,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
 }
 
 var dataService = app.Services.GetRequiredService<IApvService>();
+app.MapHealthChecks("/healthz");
 app.Run();
 
 public partial class Program { } // <--- Esto es clave para que WebApplicationFactory lo encuentre
