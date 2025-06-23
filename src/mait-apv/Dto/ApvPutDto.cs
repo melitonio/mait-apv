@@ -4,14 +4,15 @@ using Entities;
 
 namespace Dto;
 
-public record class ApvPutDto : IPutDto<Apv>
+public record ApvPutDto(
+    Guid Id,
+    Guid ContactoId,
+    Guid SerieId,
+    DateTime Fecha,
+    string? Numero,
+    string? CodigoPostal
+) : IPutDto<Apv>
 {
-    public Guid Id { get; set; }
-    public Guid ContactoId { get; set; }
-    public DateTime Fecha { get; init; }
-    public string? CodigoPostal { get; set; }
-    public string? Numero { get; set; }
-
     public void UpdateEntity(in Apv entity, string usuario)
     {
         throw new("Operación no permitida");
