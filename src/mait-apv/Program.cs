@@ -89,7 +89,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
     });
 }
 
-// _ = app.Services.GetRequiredService<IApvService>();
+_ = app.Services.GetRequiredService<IApvService>();
 app.MapHealthChecks("/healthz");
 app.Run();
 
