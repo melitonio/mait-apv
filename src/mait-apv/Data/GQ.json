@@ -9,17 +9,17 @@
     },
     {
       "Distrito": "Acurenam",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Acurenam",
       "Codigo": "0107"
     },
     {
       "Distrito": "Acurenam",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Acurenam",
       "Codigo": "0108"
     },
     {
       "Distrito": "Acurenam",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Acurenam",
       "Codigo": "0109"
     },
     {
@@ -44,17 +44,17 @@
     },
     {
       "Distrito": "Akonibe",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Akonibe",
       "Codigo": "0207"
     },
     {
       "Distrito": "Akonibe",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Akonibe",
       "Codigo": "0208"
     },
     {
       "Distrito": "Akonibe",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Akonibe",
       "Codigo": "0209"
     },
     {
@@ -79,17 +79,17 @@
     },
     {
       "Distrito": "Annobón",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Annobón",
       "Codigo": "0307"
     },
     {
       "Distrito": "Annobón",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Annobón",
       "Codigo": "0308"
     },
     {
       "Distrito": "Annobón",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Annobón",
       "Codigo": "0309"
     },
     {
@@ -99,17 +99,17 @@
     },
     {
       "Distrito": "Añisok",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Añisok",
       "Codigo": "0407"
     },
     {
       "Distrito": "Añisok",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Añisok",
       "Codigo": "0408"
     },
     {
       "Distrito": "Añisok",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Añisok",
       "Codigo": "0409"
     },
     {
@@ -139,17 +139,17 @@
     },
     {
       "Distrito": "Baney",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Baney",
       "Codigo": "0507"
     },
     {
       "Distrito": "Baney",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Baney",
       "Codigo": "0508"
     },
     {
       "Distrito": "Baney",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Baney",
       "Codigo": "0509"
     },
     {
@@ -179,17 +179,17 @@
     },
     {
       "Distrito": "Bata",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Bata",
       "Codigo": "0607"
     },
     {
       "Distrito": "Bata",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Bata",
       "Codigo": "0608"
     },
     {
       "Distrito": "Bata",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Bata",
       "Codigo": "0609"
     },
     {
@@ -249,17 +249,17 @@
     },
     {
       "Distrito": "Djibloho",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Djibloho",
       "Codigo": "0707"
     },
     {
       "Distrito": "Djibloho",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Djibloho",
       "Codigo": "0708"
     },
     {
       "Distrito": "Djibloho",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Djibloho",
       "Codigo": "0709"
     },
     {
@@ -279,17 +279,17 @@
     },
     {
       "Distrito": "Ebebiyin",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Ebebiyin",
       "Codigo": "0807"
     },
     {
       "Distrito": "Ebebiyin",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Ebebiyin",
       "Codigo": "0808"
     },
     {
       "Distrito": "Ebebiyin",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Ebebiyin",
       "Codigo": "0809"
     },
     {
@@ -319,17 +319,17 @@
     },
     {
       "Distrito": "Evinayong",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Evinayong",
       "Codigo": "0907"
     },
     {
       "Distrito": "Evinayong",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Evinayong",
       "Codigo": "0908"
     },
     {
       "Distrito": "Evinayong",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Evinayong",
       "Codigo": "0909"
     },
     {
@@ -364,17 +364,17 @@
     },
     {
       "Distrito": "Kogo",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Kogo",
       "Codigo": "1007"
     },
     {
       "Distrito": "Kogo",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Kogo",
       "Codigo": "1008"
     },
     {
       "Distrito": "Kogo",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Kogo",
       "Codigo": "1009"
     },
     {
@@ -409,17 +409,17 @@
     },
     {
       "Distrito": "Luba",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Luba",
       "Codigo": "1107"
     },
     {
       "Distrito": "Luba",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Luba",
       "Codigo": "1108"
     },
     {
       "Distrito": "Luba",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Luba",
       "Codigo": "1109"
     },
     {
@@ -454,17 +454,17 @@
     },
     {
       "Distrito": "Malabo",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Malabo",
       "Codigo": "1207"
     },
     {
       "Distrito": "Malabo",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Malabo",
       "Codigo": "1208"
     },
     {
       "Distrito": "Malabo",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Malabo",
       "Codigo": "1209"
     },
     {
@@ -524,17 +524,17 @@
     },
     {
       "Distrito": "Mbini",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Mbini",
       "Codigo": "1307"
     },
     {
       "Distrito": "Mbini",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Mbini",
       "Codigo": "1308"
     },
     {
       "Distrito": "Mbini",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Mbini",
       "Codigo": "1309"
     },
     {
@@ -564,17 +564,17 @@
     },
     {
       "Distrito": "Micomiseng",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Micomiseng",
       "Codigo": "1407"
     },
     {
       "Distrito": "Micomiseng",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Micomiseng",
       "Codigo": "1408"
     },
     {
       "Distrito": "Micomiseng",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Micomiseng",
       "Codigo": "1409"
     },
     {
@@ -609,17 +609,17 @@
     },
     {
       "Distrito": "Mongomo",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Mongomo",
       "Codigo": "1507"
     },
     {
       "Distrito": "Mongomo",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Mongomo",
       "Codigo": "1508"
     },
     {
       "Distrito": "Mongomo",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Mongomo",
       "Codigo": "1509"
     },
     {
@@ -654,17 +654,17 @@
     },
     {
       "Distrito": "Niefang",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Niefang",
       "Codigo": "1607"
     },
     {
       "Distrito": "Niefang",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Niefang",
       "Codigo": "1608"
     },
     {
       "Distrito": "Niefang",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Niefang",
       "Codigo": "1609"
     },
     {
@@ -699,17 +699,17 @@
     },
     {
       "Distrito": "Nsok-Nsomo",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Nsok-Nsomo",
       "Codigo": "1707"
     },
     {
       "Distrito": "Nsok-Nsomo",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Nsok-Nsomo",
       "Codigo": "1708"
     },
     {
       "Distrito": "Nsok-Nsomo",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Nsok-Nsomo",
       "Codigo": "1709"
     },
     {
@@ -734,17 +734,17 @@
     },
     {
       "Distrito": "Nsork",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Nsork",
       "Codigo": "1807"
     },
     {
       "Distrito": "Nsork",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Nsork",
       "Codigo": "1808"
     },
     {
       "Distrito": "Nsork",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Nsork",
       "Codigo": "1809"
     },
     {
@@ -769,17 +769,17 @@
     },
     {
       "Distrito": "Riaba",
-      "Zona": "Correspondencia Oficial",
+      "Zona": "Correspondencia Oficial - Riaba",
       "Codigo": "1907"
     },
     {
       "Distrito": "Riaba",
-      "Zona": "Corporaciones Locales",
+      "Zona": "Corporaciones Locales - Riaba",
       "Codigo": "1908"
     },
     {
       "Distrito": "Riaba",
-      "Zona": "Apartados Particulares",
+      "Zona": "Apartados Particulares - Riaba",
       "Codigo": "1909"
     },
     {
