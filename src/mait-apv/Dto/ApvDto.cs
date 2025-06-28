@@ -6,7 +6,6 @@ namespace Dto;
 public record ApvDto
 (
     Guid Id,
-    Guid ContactoId,
     Guid SerieId,
     DateOnly Fecha,
     string? Numero,
@@ -27,7 +26,6 @@ public record ApvDto
         return new ApvDto
         (
             Id: entity.Id,
-            ContactoId: entity.ContactoId,
             SerieId: entity.SerieId,
             Fecha: entity.Fecha,
             Numero: entity.Numero,

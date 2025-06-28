@@ -15,7 +15,6 @@ public class Apv : BaseApprovable, INumberSequence
     public string? Numero { get; set; }
     public DateOnly? FechaBaja { get; set; }
     public string? CodigoPostal { get; set; }      // Zona postal para apartados
-    public Guid ContactoId { get; set; }            // Titular del apartado
     public Guid SerieId { get; set; }              // Serie documental para correspondencia
     public IEnumerable<Localizacion> Localiaciones { get; set; } = [];
 

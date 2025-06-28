@@ -7,7 +7,6 @@ namespace Dto;
 public record ApvPostDto(
     string CodigoPostal,
     DateTime Fecha,
-    Guid ContactoId,
     Guid SerieId
 ) : IPostDto<Apv>
 {
@@ -18,7 +17,6 @@ public record ApvPostDto(
             Id = id ?? Guid.NewGuid(),
             CodigoPostal = CodigoPostal,
             Fecha = DateOnly.FromDateTime(Fecha),
-            ContactoId = ContactoId,
             SerieId = SerieId,
         };
         return true;
@@ -34,6 +32,5 @@ public record ApvPostDto(
     {
         if (CodigoPostal == default) yield return new("El código postal es obligatorio.", [nameof(CodigoPostal)]);
         if (Fecha == default) yield return new("Indique la fecha de Apv.", [nameof(Fecha)]);
-        if (ContactoId == default) yield return new("Indique el contacto.", [nameof(ContactoId)]);
     }
 }
