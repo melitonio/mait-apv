@@ -12,14 +12,9 @@ public class ZonaPostalService(IOptions<GqDataDto> options, ILogger<ZonaPostalSe
     /// <summary>
     /// Obtiene una zona postal por su código.
     /// </summary>
-    public Task<ZonaPostalDto> GetZonaPostalAsync(string codigoPostal)
+    public Task<ZonaPostalDto?> GetZonaPostalAsync(string codigoPostal)
     {
         var zona = _gq.Zonas.FirstOrDefault(z => z.Codigo == codigoPostal);
-        if (zona == default)
-        {
-            _logger.LogWarning("No se ha encontrado la zona postal para el código: {CodigoPostal}", codigoPostal);
-            throw new KeyNotFoundException($"No se ha encontrado la zona postal para el código: {codigoPostal}");
-        }
         return Task.FromResult(zona);
     }
 

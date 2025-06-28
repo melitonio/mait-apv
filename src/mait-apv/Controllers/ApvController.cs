@@ -26,7 +26,7 @@ public partial class ApvController
         if (!string.IsNullOrEmpty(entity.CodigoPostal))
         {
             var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
-            entity.CodigoPostal = zonaPostal.Codigo ?? throw new($"No se ha encontrado la zona postal con el código: {entity.CodigoPostal}");
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado la zona postal con el código: {entity.CodigoPostal}");
         }
         return base.OnCreateAsync(entity, dto);
     }
@@ -36,7 +36,7 @@ public partial class ApvController
         if (!string.IsNullOrEmpty(entity.CodigoPostal))
         {
             var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
-            entity.CodigoPostal = zonaPostal.Codigo ?? throw new($"No se ha encontrado la zona postal con el código: {entity.CodigoPostal}");
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado la zona postal con el código: {entity.CodigoPostal}");
         }
         return base.OnUpdateAsync(entity, dto);
     }

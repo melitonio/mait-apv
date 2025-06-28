@@ -26,7 +26,7 @@ public class LocalizacionController(
         if (!string.IsNullOrEmpty(entity.CodigoPostal))
         {
             var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
-            entity.CodigoPostal = zonaPostal.Codigo ?? throw new($"No se ha encontrado el código postal: {entity.CodigoPostal}");
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado el código postal: {entity.CodigoPostal}");
         }
         return base.OnCreateAsync(entity, dto);
     }
@@ -38,7 +38,7 @@ public class LocalizacionController(
         if (!string.IsNullOrEmpty(entity.CodigoPostal))
         {
             var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
-            entity.CodigoPostal = zonaPostal.Codigo ?? throw new($"No se ha encontrado el código postal: {entity.CodigoPostal}");
+            entity.CodigoPostal = zonaPostal?.Codigo ?? throw new($"No se ha encontrado el código postal: {entity.CodigoPostal}");
         }
         return base.OnUpdateAsync(entity, dto);
     }

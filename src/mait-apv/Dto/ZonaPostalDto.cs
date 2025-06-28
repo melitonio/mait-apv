@@ -1,11 +1,11 @@
 namespace Dto;
 
-public readonly record struct ZonaPostalDto
+public record ZonaPostalDto
 {
-    public string Zona { get; init; }
-    public string Distrito { get; init; }
-    public string Codigo { get; init; }
-    public double[][] Poligono { get; init; }
-    public string Descripcion { get; init; }
+    public string Zona { get; init; } = string.Empty;
+    public string Distrito { get; init; } = string.Empty;
+    public string Codigo { get; init; } = string.Empty;
+    public double[][] Poligono { get; init; } = [];
+    public string Descripcion { get; init; } = string.Empty;
     public override string ToString() => $"{Codigo}, {Zona} - {Distrito}";
 }
