@@ -42,9 +42,6 @@ namespace maitapv.Migrations
                     b.Property<string>("CodigoPostal")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ContactoId")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTimeOffset?>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 

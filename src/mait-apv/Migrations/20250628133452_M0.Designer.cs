@@ -12,8 +12,8 @@ using Persistence;
 namespace maitapv.Migrations
 {
     [DbContext(typeof(ServiceDbContext))]
-    [Migration("20250611163545_MInitial")]
-    partial class MInitial
+    [Migration("20250628133452_M0")]
+    partial class M0
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,9 +44,6 @@ namespace maitapv.Migrations
 
                     b.Property<string>("CodigoPostal")
                         .HasColumnType("text");
-
-                    b.Property<Guid>("ContactoId")
-                        .HasColumnType("uuid");
 
                     b.Property<DateTimeOffset?>("CreatedAt")
                         .HasColumnType("timestamp with time zone");

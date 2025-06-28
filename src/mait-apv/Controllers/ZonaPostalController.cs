@@ -37,7 +37,7 @@ public class ZonaPostalController(ZonaPostalService srv, ILogger<ZonaPostalContr
         try
         {
             var zona = _zonaPostalService.GetZonaPostalAsync(codigo).Result;
-            if (zona == null)
+            if (zona == default)
             {
                 Response.StatusCode = StatusCodes.Status404NotFound;
                 return new($"Zona postal con código {codigo} no encontrada.");

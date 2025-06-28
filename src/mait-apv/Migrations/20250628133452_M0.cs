@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace maitapv.Migrations
 {
     /// <inheritdoc />
-    public partial class MInitial : Migration
+    public partial class M0 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,6 @@ namespace maitapv.Migrations
                     Numero = table.Column<string>(type: "text", nullable: false),
                     FechaBaja = table.Column<DateOnly>(type: "date", nullable: true),
                     CodigoPostal = table.Column<string>(type: "text", nullable: true),
-                    ContactoId = table.Column<Guid>(type: "uuid", nullable: false),
                     SerieId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedAt = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true),
                     CreatedBy = table.Column<string>(type: "text", nullable: true),
