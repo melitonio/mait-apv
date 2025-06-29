@@ -597,7 +597,7 @@
       "Distrito": "Malabo",
       "Zona": "Batoicopo",
       "Codigo": "1235",
-      "centro": [3,64, 8,64]
+      "centro": [3.64, 8.64]
     },
     {
       "Provincia": "Bioko Norte",
