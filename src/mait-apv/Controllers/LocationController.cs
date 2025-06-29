@@ -8,7 +8,7 @@ using Services;
 namespace Controllers;
 
 [ApiController]
-[Route("apv/localizaciones")]
+[Route("apv/{apvId}/localizaciones")]
 public class LocalizacionController(
     IDataService dataService,
     LocalizacionService srv,
@@ -44,7 +44,7 @@ public class LocalizacionController(
     }
 
 
-    [HttpPost("{apvId}/locations")]
+    [HttpPost]
     [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ResultModel<bool>> SetLocalization(Guid apvId, LocalizacionPostDto dto)
@@ -95,7 +95,7 @@ public class LocalizacionController(
     }
 
 
-    [HttpPost("{apvId}/locations/{nombre}/active")]
+    [HttpPost("{nombre}/active")]
     [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ResultModel<bool>> ActiveLocalization(Guid apvId, string nombre)
@@ -121,7 +121,7 @@ public class LocalizacionController(
         }
     }
 
-    [HttpGet("{apvId}/locations")]
+    [HttpGet]
     [ProducesResponseType(typeof(ResultModel<IEnumerable<LocalizacionDto>>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ResultModel<IEnumerable<LocalizacionDto>>> GetByApv(Guid apvId)

@@ -23,7 +23,13 @@ public record class LocalizacionPostDto
 {
     public bool ToEntity(string usuario, out Localizacion entity, Guid? id = null)
     {
-        entity = new Localizacion
+        entity = ToEntity(usuario, id);
+        return true;
+    }
+
+    public Localizacion ToEntity(string usuario, Guid? id = null)
+    {
+        return new Localizacion
         {
             Id = id ?? Guid.NewGuid(),
             Calle = Calle,
@@ -41,13 +47,6 @@ public record class LocalizacionPostDto
             Tipo = Tipo,
             CreatedBy = usuario,
         };
-        return true;
-    }
-
-    public Localizacion ToEntity(string usuario, Guid? id = null)
-    {
-        ToEntity(usuario, out var entity, id);
-        return entity;
     }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
