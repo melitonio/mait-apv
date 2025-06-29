@@ -6,85 +6,92 @@
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Acurenam",
-      "Codigo": "0100"
+      "Codigo": "0100",
+      "centro": [1.0318, 10.6717]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Correspondencia Oficial - Acurenam",
-      "Codigo": "0107"
+      "Codigo": "0107",
+      "centro": [1.0318, 10.6717]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Corporaciones Locales - Acurenam",
-      "Codigo": "0108"
+      "Codigo": "0108",
+      "centro": [1.0318, 10.6717]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Apartados Particulares - Acurenam",
-      "Codigo": "0109"
+      "Codigo": "0109",
+      "centro": [1.0318, 10.6717]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Akelayong-Mbam",
-      "Codigo": "0110"
+      "Codigo": "0110",
+      "centro": [1.2005, 10.6001]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Ayem",
-      "Codigo": "0120"
+      "Codigo": "0120",
+      "centro": [1.0318, 10.6717]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Acurenam",
       "Zona": "Mefub",
-      "Codigo": "0130"
-    },
-    {
-      "Provincia": "Wele Nzas",
-      "Distrito": "Akonibe",
-      "Zona": "Akonibe",
-      "Codigo": "0200"
+      "Codigo": "0130",
+      "centro": [1.0645, 10.7893]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
       "Zona": "Correspondencia Oficial - Akonibe",
-      "Codigo": "0207"
+      "Codigo": "0207",
+      "centro": [1.297, 10.944]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
       "Zona": "Corporaciones Locales - Akonibe",
-      "Codigo": "0208"
+      "Codigo": "0208",
+      "centro": [1.297, 10.944]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
       "Zona": "Apartados Particulares - Akonibe",
-      "Codigo": "0209"
+      "Codigo": "0209",
+      "centro": [1.297, 10.944]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
       "Zona": "Bisobinam",
-      "Codigo": "0210"
+      "Codigo": "0210",
+      "centro": [1.217, 10.9844]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
       "Zona": "Evordulu",
-      "Codigo": "0220"
+      "Codigo": "0220",
+      "centro": [1.297, 10.944]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
       "Zona": "Kukumankok",
-      "Codigo": "0230"
+      "Codigo": "0230",
+      "centro": [1.297, 10.8196]
     },
     {
       "Provincia": "Annobón",
@@ -540,85 +547,99 @@
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Malabo",
-      "Codigo": "1200"
+      "Codigo": "1200",
+      "centro": [3.7555, 8.7802]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Correspondencia Oficial - Malabo",
-      "Codigo": "1207"
+      "Codigo": "1207",
+      "centro": [3.7555, 8.7802]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Corporaciones Locales - Malabo",
-      "Codigo": "1208"
+      "Codigo": "1208",
+      "centro": [3.7555, 8.7802]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Apartados Particulares - Malabo",
-      "Codigo": "1209"
+      "Codigo": "1209",
+      "centro": [3.7555, 8.7802]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Amilivia-La Paz",
-      "Codigo": "1210"
+      "Codigo": "1210",
+      "centro": [3.7522, 8.7797]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Banapa",
-      "Codigo": "1220"
+      "Codigo": "1220",
+      "centro": [3.7240, 8.7680]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Basupu del Oeste",
-      "Codigo": "1230"
+      "Codigo": "1230",
+      "centro": [3.7188, 8.6856]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Batoicopo",
-      "Codigo": "1235"
+      "Codigo": "1235",
+      "centro": [3,64, 8,64]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Ela-Nguema",
-      "Codigo": "1240"
+      "Codigo": "1240",
+      "centro": [3.7575, 8.799]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Lampert-San Valentín",
-      "Codigo": "1250"
+      "Codigo": "1250",
+      "centro": [3.7450, 8.7835]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Malabo II-M",
-      "Codigo": "1260"
+      "Codigo": "1260",
+      "centro": [3.7401, 8.7462]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Sacriba",
-      "Codigo": "1270"
+      "Codigo": "1270",
+      "centro": [3.7555, 8.7802]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Santa María",
-      "Codigo": "1280"
+      "Codigo": "1280",
+      "centro": [3.741, 8.770]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Malabo",
       "Zona": "Sipopo",
-      "Codigo": "1290"
+      "Codigo": "1290",
+      "centro": [3.7653, 8.8924]
     },
     {
       "Provincia": "Litoral",
