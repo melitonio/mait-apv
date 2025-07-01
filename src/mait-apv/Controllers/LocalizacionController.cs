@@ -8,7 +8,7 @@ using Services;
 namespace Controllers;
 
 [ApiController]
-[Route("apv/{apvId}/localizaciones")]
+[Route("apv/{apvId}/[controller]")]
 public class LocalizacionController(
     IDataService dataService,
     LocalizacionService srv,
@@ -44,7 +44,12 @@ public class LocalizacionController(
     }
 
 
-    [HttpPost]
+    public override ValueTask<ResultModel<LocalizacionDto>> PostAsync(LocalizacionPostDto dto)
+    {
+        return ValueTask.FromResult<ResultModel<LocalizacionDto>>(new("Utilice el endpoint Set-Localization para agregar una localización a un apartado específico."));
+    }
+
+    [HttpPost("set-localization")]
     [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ResultModel<bool>> SetLocalization(Guid apvId, LocalizacionPostDto dto)
@@ -121,7 +126,7 @@ public class LocalizacionController(
         }
     }
 
-    [HttpGet]
+    [HttpGet("by-apv")]
     [ProducesResponseType(typeof(ResultModel<IEnumerable<LocalizacionDto>>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ResultModel<IEnumerable<LocalizacionDto>>> GetByApv(Guid apvId)

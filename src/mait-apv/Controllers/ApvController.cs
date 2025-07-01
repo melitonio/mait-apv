@@ -14,11 +14,20 @@ namespace Controllers;
 public partial class ApvController
 (
     IApvService crudService,
+    LocalizacionService localizacionService,
     ILogger<ApvController> logger,
     ZonaPostalService zonaPostalService
 ) : ApiCrudControllerBase<Apv, ApvPostDto, ApvPutDto, ApvDto>(crudService, logger)
 {
     private readonly ZonaPostalService _zonaPostalService = zonaPostalService;
+    private readonly LocalizacionService _localizacionService = localizacionService;
+
+    protected async override Task<Apv?> OnRead(Guid id)
+    {
+        var entity = await base.OnRead(id) ?? throw new($"No se ha encontrado el apartado con ID: {id}");
+        entity.Localiaciones = await _localizacionService.GetByFilterAsync(l => l.ApvId == id) ?? [];
+        return entity;
+    }
 
     protected override Task OnCreateAsync(Apv entity, ApvPostDto dto)
     {
