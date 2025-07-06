@@ -10,8 +10,10 @@ HEALTHCHECK --interval=10s --timeout=3s --retries=3 --start-period=30s \
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
+
 COPY ["mait-apv.csproj", "."]
 RUN dotnet restore "mait-apv.csproj"
+
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "mait-apv.csproj" -c Release -o /app/build
