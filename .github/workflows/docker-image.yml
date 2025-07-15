@@ -32,3 +32,9 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: melitonio/apv:latest
+
+      - name: notify hook
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"appName": "mait-apv", "tag": "latest", "repository": "github.com/melitonio/mait-apv.git"}' \
+          ${{ secrets.HOOK_URL }}

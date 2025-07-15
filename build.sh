@@ -1,7 +1,15 @@
-# docker buildx create --use --name multiplatform-builder
-#docker buildx inspect --bootstrap
+#!/bin/bash
+set -e
 
-# docker buildx build ./src/mait-apv/ --platform linux/amd64 -t registry.mait.gq/apv:latest --push
+APP_NAME="$1"
+TAG="$2"
+IMAGE="registry.mait.gq/${APP_NAME}:${TAG}"
 
-docker build ./src/mait-apv/ -t registry.mait.gq/apv:latest
-docker push registry.mait.gq/apv:latest
+echo "🛠️ Construyendo imagen $IMAGE"
+docker build ./src/mait-apv/ -t $IMAGE
+
+echo "📤 Subiendo imagen a $IMAGE"
+docker push $IMAGE
+
+echo "🧹 Eliminando imagen local $IMAGE"
+docker rmi $IMAGE || true
