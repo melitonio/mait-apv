@@ -64,7 +64,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new()
     {
-        Title = "Apv service",
+        Title = "Apv Service",
         Version = "v1"
     });
 });
