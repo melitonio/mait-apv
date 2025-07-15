@@ -13,28 +13,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up QEMU emulation
-        uses: docker/setup-qemu-action@v2
+      # - name: Set up QEMU emulation
+      #   uses: docker/setup-qemu-action@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+      # - name: Set up Docker Buildx
+      #   uses: docker/setup-buildx-action@v2
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+      # - name: Login to Docker Hub
+      #   uses: docker/login-action@v2
+      #   with:
+      #     username: ${{ secrets.DOCKER_USERNAME }}
+      #     password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build & push multi-arch image
-        uses: docker/build-push-action@v4
-        with:
-          context: ./src/mait-apv
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: melitonio/apv:latest
+      # - name: Build & push multi-arch image
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     context: ./src/mait-apv
+      #     platforms: linux/amd64,linux/arm64
+      #     push: true
+      #     tags: melitonio/apv:latest
 
       - name: notify hook
         run: |
           curl -X POST -H "Content-Type: application/json" \
           -d '{"appName": "mait-apv", "tag": "latest", "repository": "github.com/melitonio/mait-apv.git"}' \
-          ${{ secrets.HOOK_URL }}
+          https://web-hook-runner.mait.gq
