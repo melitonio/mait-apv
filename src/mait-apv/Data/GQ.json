@@ -97,451 +97,526 @@
       "Provincia": "Annobón",
       "Distrito": "Annobón",
       "Zona": "Annobón",
-      "Codigo": "0300"
+      "Codigo": "0300",
+      "centro": [-1.4046, 5.6333]
     },
     {
       "Provincia": "Annobón",
       "Distrito": "Annobón",
       "Zona": "Correspondencia Oficial - Annobón",
-      "Codigo": "0307"
+      "Codigo": "0307",
+      "centro": [-1.4046, 5.6333]
     },
     {
       "Provincia": "Annobón",
       "Distrito": "Annobón",
       "Zona": "Corporaciones Locales - Annobón",
-      "Codigo": "0308"
+      "Codigo": "0308",
+      "centro": [-1.4046, 5.6333]
     },
     {
       "Provincia": "Annobón",
       "Distrito": "Annobón",
       "Zona": "Apartados Particulares - Annobón",
-      "Codigo": "0309"
+      "Codigo": "0309",
+      "centro": [-1.4046, 5.6333]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Añisok",
-      "Codigo": "0400"
+      "Codigo": "0400",
+      "centro": [1.8426, 10.7434]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Correspondencia Oficial - Añisok",
-      "Codigo": "0407"
+      "Codigo": "0407",
+      "centro": [1.8426, 10.7434]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Corporaciones Locales - Añisok",
-      "Codigo": "0408"
+      "Codigo": "0408",
+      "centro": [1.8426, 10.7434]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Apartados Particulares - Añisok",
-      "Codigo": "0409"
+      "Codigo": "0409",
+      "centro": [1.8426, 10.7434]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Angonoweñ",
-      "Codigo": "0410"
+      "Codigo": "0410",
+      "Centro": [1.8605, 10.7770]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Ayene-A",
-      "Codigo": "0420"
+      "Codigo": "0420",
+      "Centro": [1.8696, 106812]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Bibara",
-      "Codigo": "0430"
+      "Codigo": "0430",
+      "Centro": [1.9198, 10.8468]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Añisok",
       "Zona": "Milong",
-      "Codigo": "0440"
+      "Codigo": "0440",
+      "Centro": [1.7639, 10.6105]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Baney",
-      "Codigo": "0500"
+      "Codigo": "0500",
+      "centro": [3.7025, 8.9091]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Correspondencia Oficial - Baney",
-      "Codigo": "0507"
+      "Codigo": "0507",
+      "centro": [3.7025, 8.9091]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Corporaciones Locales - Baney",
-      "Codigo": "0508"
+      "Codigo": "0508",
+      "centro": [3.7025, 8.9091]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Apartados Particulares - Baney",
-      "Codigo": "0509"
+      "Codigo": "0509",
+      "centro": [3.7025, 8.9091]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
-      "Zona": "Bariboe",
-      "Codigo": "0510"
+      "Zona": "Bariobe",
+      "Codigo": "0510",
+      "centro": [3.5883, 8.8680]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Basakato del Este",
-      "Codigo": "0520"
+      "Codigo": "0520",
+      "centro": [3.6390, 8.9118]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Bososo",
-      "Codigo": "0530"
+      "Codigo": "0530",
+      "Centro": [3.6019, 8.8878]
     },
     {
       "Provincia": "Bioko Norte",
       "Distrito": "Baney",
       "Zona": "Rebola",
-      "Codigo": "0540"
+      "Codigo": "0540",
+      "centro": [3.7266, 8.8443]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Bata",
-      "Codigo": "0600"
+      "Codigo": "0600",
+      "centro": [1.8638, 9.7665]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Correspondencia Oficial - Bata",
-      "Codigo": "0607"
+      "Codigo": "0607",
+      "centro": [1.8638, 9.7665]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Corporaciones Locales - Bata",
-      "Codigo": "0608"
+      "Codigo": "0608",
+      "centro": [1.8638, 9.7665]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Apartados Particulares - Bata",
-      "Codigo": "0609"
+      "Codigo": "0609",
+      "centro": [1.8638, 9.7665]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Lia",
-      "Codigo": "0610"
+      "Codigo": "0610",
+      "Centro": [1.8683, 9.7858]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Machinda",
-      "Codigo": "0615"
+      "Codigo": "0615",
+      "Centro": [1.8786, 9.97155]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Miboman",
-      "Codigo": "0625"
+      "Codigo": "0625",
+      "Centro": [1.7334, 9.89999]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Mocomo",
-      "Codigo": "0635"
+      "Codigo": "0635",
+      "Centro": [1.7280, 9.7640]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Ncoantoma",
-      "Codigo": "0645"
+      "Codigo": "0645",
+      "Centro": [1.8215, 9.8114]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Ndjiacom",
-      "Codigo": "0655"
+      "Codigo": "0655",
+      "Centro": [2.0326, 9.9135]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Ngolo",
-      "Codigo": "0660"
+      "Codigo": "0660",
+      "Centro": [1.8607, 9.7886]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Rio Campo",
-      "Codigo": "0670"
+      "Codigo": "0670",
+      "Centro": [2.3399, 9.8201]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Udubuandjolo",
-      "Codigo": "0680"
+      "Codigo": "0680",
+      "Centro": [1.8610, 9.7594]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Bata",
       "Zona": "Ukomba",
-      "Codigo": "0690"
+      "Codigo": "0690",
+      "Centro": [1.8531, 9.7555]
     },
     {
       "Provincia": "Djibloho",
       "Distrito": "Djibloho",
       "Zona": "Djibloho",
-      "Codigo": "0700"
+      "Codigo": "0700",
+      "Centro": [1.5958, 10.8373]
     },
     {
       "Provincia": "Djibloho",
       "Distrito": "Djibloho",
       "Zona": "Correspondencia Oficial - Djibloho",
-      "Codigo": "0707"
+      "Codigo": "0707",
+      "Centro": [1.5969, 10.8534]
     },
     {
       "Provincia": "Djibloho",
       "Distrito": "Djibloho",
       "Zona": "Corporaciones Locales - Djibloho",
-      "Codigo": "0708"
+      "Codigo": "0708",
+      "Centro": [1.5820, 10.8105]
     },
     {
       "Provincia": "Djibloho",
       "Distrito": "Djibloho",
       "Zona": "Apartados Particulares - Djibloho",
-      "Codigo": "0709"
+      "Codigo": "0709",
+      "Centro": [1.6321, 10.8502]
     },
     {
       "Provincia": "Djibloho",
       "Distrito": "Djibloho",
       "Zona": "Mebere",
-      "Codigo": "0710"
+      "Codigo": "0710",
+      "Centro": [1.6334, 10.8833]
     },
     {
       "Provincia": "Djibloho",
       "Distrito": "Djibloho",
       "Zona": "Oyala",
-      "Codigo": "0720"
+      "Codigo": "0720",
+      "Centro": [1.6167, 10.8276]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Ebebiyin",
-      "Codigo": "0800"
+      "Codigo": "0800",
+      "centro": [2.1481, 11.3364]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Correspondencia Oficial - Ebebiyin",
-      "Codigo": "0807"
+      "Codigo": "0807",
+      "centro": [2.1481, 11.3364]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Corporaciones Locales - Ebebiyin",
-      "Codigo": "0808"
+      "Codigo": "0808",
+      "centro": [2.1481, 11.3364]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Apartados Particulares - Ebebiyin",
-      "Codigo": "0809"
+      "Codigo": "0809",
+      "centro": [2.1481, 11.3364]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Bidjabidjan",
-      "Codigo": "0810"
+      "Codigo": "0810",
+      "centro": [2.1643, 11.1487]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
-      "Zona": "Eteg-Vefí",
-      "Codigo": "0820"
+      "Zona": "Eteg-Veíñ",
+      "Codigo": "0820",
+      "Centro": [1.8954, 11.2628]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Okong-Oyec",
-      "Codigo": "0830"
+      "Codigo": "0830",
+      "centro": [2.0973, 11.1475]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Ebebiyin",
       "Zona": "Ongoma",
-      "Codigo": "0840"
+      "Codigo": "0840",
+      "Centro": [1.9966, 11.2514]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Evinayong",
-      "Codigo": "0900"
+      "Codigo": "0900",
+      "Centro": [1.4386, 10.5510]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Correspondencia Oficial - Evinayong",
-      "Codigo": "0907"
+      "Codigo": "0907",
+      "Centro":[1.4321, 10.5516]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Corporaciones Locales - Evinayong",
-      "Codigo": "0908"
+      "Codigo": "0908",
+      "Centro": [1.4362, 10.54899]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Apartados Particulares - Evinayong",
-      "Codigo": "0909"
+      "Codigo": "0909",
+      "Centro": [1.4352, 10.5639]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Adjelon",
-      "Codigo": "0910"
+      "Codigo": "0910",
+      "Centro" : [1.5498, 10.7496]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Bicurga",
-      "Codigo": "0920"
+      "Codigo": "0920",
+      "Centro": [1.5840, 10.4562]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Ebolowa",
-      "Codigo": "0930"
+      "Codigo": "0930",
+      "Centro": [1.4819, 10.4904]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Misión San José",
-      "Codigo": "0940"
+      "Codigo": "0940",
+      "Centro": [1.4479, 10.5949]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Evinayong",
       "Zona": "Teguete",
-      "Codigo": "0950"
+      "Codigo": "0950",
+      "Centro": [1.3407, 10.28085]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Kogo",
-      "Codigo": "1000"
+      "Codigo": "1000",
+      "Centro": [1.0865, 9.6938]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Correspondencia Oficial - Kogo",
-      "Codigo": "1007"
+      "Codigo": "1007",
+      "Centro": [1.0844, 9.6944]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Corporaciones Locales - Kogo",
-      "Codigo": "1008"
+      "Codigo": "1008",
+      "Centro": [1.0869, 9.6958]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Apartados Particulares - Kogo",
-      "Codigo": "1009"
+      "Codigo": "1009",
+      "Centro": [1.0851, 9.6975]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Bogo",
-      "Codigo": "1010"
+      "Codigo": "1010",
+      "Centro": [1.0838, 9.6999]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Cabo San Juan",
-      "Codigo": "1020"
+      "Codigo": "1020",
+      "Centro": [1.1518, 9.3615]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Corisco",
-      "Codigo": "1030"
+      "Codigo": "1030",
+      "Centro": [0.9071, 9.309]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Mbañe",
-      "Codigo": "1040"
+      "Codigo": "1040",
+      "Centro": [0.8105, 9.3795]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Kogo",
       "Zona": "Mibonde-Elon",
-      "Codigo": "1050"
+      "Codigo": "1050",
+      "Centro": [1.1351, 9.8062]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Luba",
-      "Codigo": "1100"
+      "Codigo": "1100",
+      "Centro": [3.4599, 8.55299]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Correspondencia Oficial - Luba",
-      "Codigo": "1107"
+      "Codigo": "1107",
+      "Centro": [3.4597, 8.5583]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Corporaciones Locales - Luba",
-      "Codigo": "1108"
+      "Codigo": "1108",
+      "Centro": [3.4580, 8.553]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Apartados Particulares - Luba",
-      "Codigo": "1109"
+      "Codigo": "1109",
+      "Centro": [3.4593, 8.5489]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Basakato del Oeste",
-      "Codigo": "1110"
+      "Codigo": "1110",
+      "Centro": [3.5946, 8.6238]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Batete",
-      "Codigo": "1120"
+      "Codigo": "1120",
+      "Centro": [3.4466, 8.5066]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Moca",
-      "Codigo": "1130"
+      "Codigo": "1130",
+      "Centr": [3.3513, 8.6612]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Moeri",
-      "Codigo": "1140"
+      "Codigo": "1140",
+      "Centro": [3.4690, 8.6693]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Luba",
       "Zona": "Musola",
-      "Codigo": "1150"
+      "Codigo": "1150",
+      "Centro": [3.4222, 8.6495]
     },
     {
       "Provincia": "Bioko Norte",
@@ -645,337 +720,393 @@
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Mbini",
-      "Codigo": "1300"
+      "Codigo": "1300",
+      "Centro": [1.5847, 9.6155]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Correspondencia Oficial - Mbini",
-      "Codigo": "1307"
+      "Codigo": "1307",
+      "Centro": [1.5893, 9.61510]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Corporaciones Locales - Mbini",
-      "Codigo": "1308"
+      "Codigo": "1308",
+      "Centro":[1.5861, 9.6170]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Apartados Particulares - Mbini",
-      "Codigo": "1309"
+      "Codigo": "1309",
+      "Centro": [1.5863, 9.6137]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Akanabor",
-      "Codigo": "1310"
+      "Codigo": "1310",
+      "Centro": [1.6737, 10.3740]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Bitika",
-      "Codigo": "1320"
+      "Codigo": "1320",
+      "Centro": [1.4241, 1.9183]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Handje",
-      "Codigo": "1330"
+      "Codigo": "1330",
+      "Centro": [1.6531, 9.8238]
     },
     {
       "Provincia": "Litoral",
       "Distrito": "Mbini",
       "Zona": "Mitom",
-      "Codigo": "1340"
+      "Codigo": "1340",
+      "Centro": [1.5582, 9.7011]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Micomiseng",
-      "Codigo": "1400"
+      "Codigo": "1400",
+      "Centro": [2.1471, 10.6153]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Correspondencia Oficial - Micomiseng",
-      "Codigo": "1407"
+      "Codigo": "1407",
+      "Centro": [2.1473, 10.6163]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Corporaciones Locales - Micomiseng",
-      "Codigo": "1408"
+      "Codigo": "1408",
+      "Centro": [2.1440, 10.6141]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Apartados Particulares - Micomiseng",
-      "Codigo": "1409"
+      "Codigo": "1409",
+      "Centro": [2.1443, 10.6125]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Akok-Esabok",
-      "Codigo": "1410"
+      "Codigo": "1410",
+      "Centro": [2.1358, 10.6166]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Ayak-Ntangan",
-      "Codigo": "1420"
+      "Codigo": "1420",
+      "Centro": [2.1258, 10.6140]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Beayop",
-      "Codigo": "1430"
+      "Codigo": "1430",
+      "Centro": [2.1510, 10.8063]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Nkue",
-      "Codigo": "1440"
+      "Codigo": "1440",
+      "Centro": [2.0153, 10.4672]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Micomiseng",
       "Zona": "Nsang",
-      "Codigo": "1450"
+      "Codigo": "1450",
+      "Centro": [2.0218, 10.9387]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Mongomo",
-      "Codigo": "1500"
+      "Codigo": "1500",
+      "Centro": [1.6274, 11.3197]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Correspondencia Oficial - Mongomo",
-      "Codigo": "1507"
+      "Codigo": "1507",
+      "Centro": [1.6254, 11.3074]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Corporaciones Locales - Mongomo",
-      "Codigo": "1508"
+      "Codigo": "1508",
+      "Centro": [1.6236, 11.3181]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Apartados Particulares - Mongomo",
-      "Codigo": "1509"
+      "Codigo": "1509",
+      "Centro": [1.6344, 11.2963]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Ebang",
-      "Codigo": "1510"
+      "Codigo": "1510",
+      "Centro": [1.5743, 11.1794]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Mebam",
-      "Codigo": "1520"
+      "Codigo": "1520",
+      "Centro": [1.2084, 10.5867]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Mongomeyen",
-      "Codigo": "1530"
+      "Codigo": "1530",
+      "Centro": [1.6976, 11.0327]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Nsang-Ayong",
-      "Codigo": "1540"
+      "Codigo": "1540",
+      "Centro": [1.5764, 11.09895]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Mongomo",
       "Zona": "Oveng",
-      "Codigo": "1550"
+      "Codigo": "1550",
+      "Centro": [1.5555, 11.1931]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Niefang",
-      "Codigo": "1600"
+      "Codigo": "1600",
+      "Centro": [1.8531, 10.25097]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Correspondencia Oficial - Niefang",
-      "Codigo": "1607"
+      "Codigo": "1607",
+      "Centro": [1.8495, 10.2515]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Corporaciones Locales - Niefang",
-      "Codigo": "1608"
+      "Codigo": "1608",
+      "Centro": [1.8519, 10.2453]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Apartados Particulares - Niefang",
-      "Codigo": "1609"
+      "Codigo": "1609",
+      "Centro": [1.8489, 10.2435]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Andom",
-      "Codigo": "1610"
+      "Codigo": "1610",
+      "Centro": [1.7699, 10.60196]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Ayene-N",
-      "Codigo": "1620"
+      "Codigo": "1620",
+      "Centro": [1.6938, 103028]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Miyobo",
-      "Codigo": "1630"
+      "Codigo": "1630",
+      "Centro": [1.7495, 10.1767]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Nkimi",
-      "Codigo": "1640"
+      "Codigo": "1640",
+      "Centro": [1.9298, 10.3457]
     },
     {
       "Provincia": "Centro Sur",
       "Distrito": "Niefang",
       "Zona": "Nkumeñkíen",
-      "Codigo": "1650"
+      "Codigo": "1650",
+      "Centro": [1.5705, 10.3633]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Nsok-Nsomo",
-      "Codigo": "1700"
+      "Codigo": "1700",
+      "Centro": [1.8776, 11.0885]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Correspondencia Oficial - Nsok-Nsomo",
-      "Codigo": "1707"
+      "Codigo": "1707",
+      "Centro": [1.8788, 11.0897]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Corporaciones Locales - Nsok-Nsomo",
-      "Codigo": "1708"
+      "Codigo": "1708",
+      "Centro": [1.8845, 11.0923]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Apartados Particulares - Nsok-Nsomo",
-      "Codigo": "1709"
+      "Codigo": "1709",
+      "Centro": [1.8749, 11.0846]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Abiara",
-      "Codigo": "1710"
+      "Codigo": "1710",
+      "Centro": [1.8893, 11.1839]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Andom-Ovang",
-      "Codigo": "1720"
+      "Codigo": "1720",
+      "Centro": [1.7978, 11.0335]
     },
     {
       "Provincia": "Kie Ntem",
       "Distrito": "Nsok-Nsomo",
       "Zona": "Menduma",
-      "Codigo": "1730"
+      "Codigo": "1730",
+      "Centro": [1.7689, 11.0673]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Nsork",
-      "Codigo": "1800"
+      "Codigo": "1800",
+      "Centro": [1.1315, 11.2675]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Correspondencia Oficial - Nsork",
-      "Codigo": "1807"
+      "Codigo": "1807",
+      "Centr": [1.1311, 11.2730]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Corporaciones Locales - Nsork",
-      "Codigo": "1808"
+      "Codigo": "1808",
+      "Centro": [1.1281, 11.2659]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Apartados Particulares - Nsork",
-      "Codigo": "1809"
+      "Codigo": "1809",
+      "Centro": [1.1370, 11.2660]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Abumeyem",
-      "Codigo": "1810"
+      "Codigo": "1810",
+      "Centro": [1.0382, 11.0054]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Dumu",
-      "Codigo": "1820"
+      "Codigo": "1820",
+      "Centro": [1.3679, 11.3146]
     },
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Nsork",
       "Zona": "Nvom",
-      "Codigo": "1830"
+      "Codigo": "1830",
+      "Centro": [1.3806, 11.2269]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Riaba",
-      "Codigo": "1900"
+      "Codigo": "1900",
+      "Centro": [3.3882, 8.7593]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Correspondencia Oficial - Riaba",
-      "Codigo": "1907"
+      "Codigo": "1907",
+      "Centro": [3.3838, 8.7610]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Corporaciones Locales - Riaba",
-      "Codigo": "1908"
+      "Codigo": "1908",
+      "Centro": [3.3876, 8.7593]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Apartados Particulares - Riaba",
-      "Codigo": "1909"
+      "Codigo": "1909",
+      "Centro": [3.3858, 8.75796]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Baho-Grande",
-      "Codigo": "1910"
+      "Codigo": "1910",
+      "Centro": [3.5242, 8.82299]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Ehoco",
-      "Codigo": "1920"
+      "Codigo": "1920",
+      "Centro": [3.3207, 8.7423]
     },
     {
       "Provincia": "Bioko Sur",
       "Distrito": "Riaba",
       "Zona": "Maule",
-      "Codigo": "1930"
+      "Codigo": "1930",
+      "Centro": [3.4223, 8.7194]
     }
   ]
 }
