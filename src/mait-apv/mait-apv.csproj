@@ -16,8 +16,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3" />
 
-    <PackageReference Include="MAIT.DataAccess" Version="2.10.159" />
-    <PackageReference Include="MAIT.Services" Version="2.10.159" />
+    <PackageReference Include="MAIT.DataAccess" Version="2.10.164" />
+    <PackageReference Include="MAIT.Services" Version="2.10.164" />
     
   </ItemGroup>
 
