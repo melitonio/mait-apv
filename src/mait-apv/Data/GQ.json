@@ -54,6 +54,13 @@
     {
       "Provincia": "Wele Nzas",
       "Distrito": "Akonibe",
+      "Zona": "Akonibe",
+      "Codigo": "0200",
+      "centro": [1.297, 10.944]
+    },
+    {
+      "Provincia": "Wele Nzas",
+      "Distrito": "Akonibe",
       "Zona": "Correspondencia Oficial - Akonibe",
       "Codigo": "0207",
       "centro": [1.297, 10.944]

@@ -31,9 +31,22 @@ public class ZonaPostalService(IOptions<GqDataDto> options, ILogger<ZonaPostalSe
     /// <summary>
     /// Obtiene una lista de distritos únicos de las zonas postales.
     /// </summary>
-    public Task<IEnumerable<string>> GetDistritos()
+    public Task<IEnumerable<DistritoDto>> GetDistritos()
     {
-        return Task.FromResult(_gq.Zonas?.Select(z => z.Distrito)?.Distinct() ?? []);
+        return Task.FromResult(_gq.Zonas?.Select(z => new DistritoDto(z.Distrito, z.Provincia))?.Distinct() ?? []);
+    }
+
+
+
+    /// <summary>
+    /// Obtiene una lista de distritos únicos de las zonas postales.
+    /// </summary>
+    public Task<IEnumerable<ZonaPostalDto>> GetZonasFisicasAsync()
+    {
+        return Task.FromResult(_gq.Zonas?.Where
+        (
+            z => !(z.Codigo.EndsWith("07") || z.Codigo.EndsWith("08") || z.Codigo.EndsWith("09"))
+        ).Distinct() ?? []);
     }
 
     /// <summary>

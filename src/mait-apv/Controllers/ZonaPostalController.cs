@@ -32,6 +32,25 @@ public class ZonaPostalController(ZonaPostalService srv, ILogger<ZonaPostalContr
     }
 
 
+
+    [HttpGet("fisicas")]
+    public async ValueTask<ResultModel<IEnumerable<ZonaPostalDto>>> GetAllZonasFisicas()
+    {
+        try
+        {
+            var zonas = await _zonaPostalService.GetZonasFisicasAsync();
+            return new(zonas.OrderBy(z => z.Provincia));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error al obtener las zonas postales");
+            Response.StatusCode = StatusCodes.Status500InternalServerError;
+            return new($"Error al obtener las zonas postales: {ex.Message}");
+        }
+    }
+
+
+
     [HttpGet("filtrar/{zona}")]
     public async ValueTask<ResultModel<IEnumerable<ZonaPostalDto>>> GetByDistrito(string zona)
     {
@@ -72,7 +91,7 @@ public class ZonaPostalController(ZonaPostalService srv, ILogger<ZonaPostalContr
 
 
     [HttpGet("distritos")]
-    public async ValueTask<ResultModel<IEnumerable<string>>> GetDistritos()
+    public async ValueTask<ResultModel<IEnumerable<DistritoDto>>> GetDistritos()
     {
         try
         {
