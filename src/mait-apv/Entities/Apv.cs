@@ -20,4 +20,16 @@ public class Apv : BaseApprovable, INumberSequence
 
     public Localizacion? Localizacion => Localiaciones.SingleOrDefault(x => x.Activa);
     public static string DefaultNumero { get; } = $"apv-{DateTime.Now:yy-MM}-0000000";
+
+    public string? Nombre { get; set; }
+    public string? Apellidos { get; set; }
+    public string NombreCompleto => $"{Nombre} {Apellidos}".Trim();
+
+
+    public string? EmergenciaNombre { get; set; }
+    public string? EmergenciaTelefono { get; set; }
+    public string? EmergenciaRelacion { get; set; }
+
+    public double Latitud { get; set; }
+    public double Longitud { get; set; }
 }

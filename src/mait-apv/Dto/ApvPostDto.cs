@@ -7,7 +7,14 @@ namespace Dto;
 public record ApvPostDto(
     string CodigoPostal,
     DateTime Fecha,
-    Guid SerieId
+    Guid SerieId,
+    string? Nombre,
+    string? Apellidos,
+    string? EmergenciaNombre,
+    string? EmergenciaTelefono,
+    string? EmergenciaRelacion,
+    double Latitud,
+    double Longitud
 ) : IPostDto<Apv>
 {
     public bool ToEntity(string usuario, out Apv entity, Guid? id = null)
@@ -18,6 +25,11 @@ public record ApvPostDto(
             CodigoPostal = CodigoPostal,
             Fecha = DateOnly.FromDateTime(Fecha),
             SerieId = SerieId,
+            EmergenciaNombre = EmergenciaNombre,
+            EmergenciaTelefono = EmergenciaTelefono,
+            EmergenciaRelacion = EmergenciaRelacion,
+            Latitud = Latitud,
+            Longitud = Longitud
         };
         return true;
     }
