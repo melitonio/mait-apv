@@ -9,7 +9,7 @@ using Entities;
 
 namespace Services;
 
-public class ApvService : BaseCrudService<ApvService, Apv>, IApvService
+public class ApvService : BaseCrudService<Apv>, IApvService
 {
     private readonly ICapPublisher _capPublisher;
 
@@ -43,5 +43,9 @@ public class ApvService : BaseCrudService<ApvService, Apv>, IApvService
     {
         // return _httpContextAccessor.HttpContext?.User?.Identity?.Name ?? "Unknown";
         return "Unknown";
+    }
+
+    protected override void Init()
+    {
     }
 }

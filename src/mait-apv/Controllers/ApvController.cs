@@ -16,7 +16,7 @@ public partial class ApvController
     LocalizacionService localizacionService,
     ILogger<ApvController> logger,
     ZonaPostalService zonaPostalService
-) : ApiCrudControllerBase<Apv, ApvPostDto, ApvPutDto, ApvDto>(crudService, logger)
+) : MAIT.Services.BaseControllerCrudApproveEntityService<Apv, ApvPostDto, ApvPutDto, ApvDto>(crudService, logger)
 {
     private readonly ZonaPostalService _zonaPostalService = zonaPostalService;
     private readonly LocalizacionService _localizacionService = localizacionService;

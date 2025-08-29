@@ -30,7 +30,7 @@ public record ApvDto
             Fecha: entity.Fecha,
             Numero: entity.Numero,
             CodigoPostal: entity.CodigoPostal,
-            IsActive: entity.IsActive && (entity.IsApproved ?? false),
+            IsActive: entity.IsEnabled,
             IsApproved: entity.IsApproved ?? false,
             Localiaciones: entity.Localiaciones.Select(x => LocalizacionDto.FromEntity(x, out LocalizacionDto dto) ? dto : throw new($"{x?.Nombre} no se pudo convertir a LocalizacionDto"))
         );
