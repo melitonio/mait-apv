@@ -14,7 +14,7 @@ public class LocalizacionController(
     LocalizacionService srv,
     ZonaPostalService zonaPostalService,
     ILogger<LocalizacionController> logger
-) : ApiCrudControllerBase<Localizacion, LocalizacionPostDto, LocalizacionPutDto, LocalizacionDto>(srv, logger)
+) : BaseControllerCrudEntityService<Localizacion, LocalizacionPostDto, LocalizacionPutDto, LocalizacionDto>(srv, logger)
 {
     private readonly IDataService _dataService = dataService;
     private readonly ZonaPostalService _zonaPostalService = zonaPostalService;
