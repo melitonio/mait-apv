@@ -12,6 +12,14 @@ public record ApvDto
     string? CodigoPostal,
     bool IsActive,
     bool IsApproved,
+    string? Nombre,
+    string? Apellidos,
+    string? EmergenciaNombre,
+    string? EmergenciaTelefono,
+    string? EmergenciaRelacion,
+    double Latitud,
+    double Longitud,
+    string? FotoVivienda,
     IEnumerable<LocalizacionDto> Localiaciones
 ) : IGetDto<Apv>
 {
@@ -32,6 +40,14 @@ public record ApvDto
             CodigoPostal: entity.CodigoPostal,
             IsActive: entity.IsEnabled,
             IsApproved: entity.IsApproved ?? false,
+            Nombre: entity.Nombre,
+            Apellidos: entity.Apellidos,
+            EmergenciaNombre: entity.EmergenciaNombre,
+            EmergenciaTelefono: entity.EmergenciaTelefono,
+            EmergenciaRelacion: entity.EmergenciaRelacion,
+            Latitud: entity.Latitud,
+            Longitud: entity.Longitud,
+            FotoVivienda: entity.FotoVivienda,
             Localiaciones: entity.Localiaciones.Select(x => LocalizacionDto.FromEntity(x, out LocalizacionDto dto) ? dto : throw new($"{x?.Nombre} no se pudo convertir a LocalizacionDto"))
         );
     }

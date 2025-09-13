@@ -32,4 +32,6 @@ public class Apv : BaseApprovable, INumberSequence
 
     public double Latitud { get; set; }
     public double Longitud { get; set; }
+
+    public string? FotoVivienda { get; set; }
 }

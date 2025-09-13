@@ -14,7 +14,8 @@ public record ApvPostDto(
     string? EmergenciaTelefono,
     string? EmergenciaRelacion,
     double Latitud,
-    double Longitud
+    double Longitud,
+    string? FotoVivienda
 ) : IPostDto<Apv>
 {
     public bool ToEntity(string usuario, out Apv entity, Guid? id = null)
@@ -29,7 +30,11 @@ public record ApvPostDto(
             EmergenciaTelefono = EmergenciaTelefono,
             EmergenciaRelacion = EmergenciaRelacion,
             Latitud = Latitud,
-            Longitud = Longitud
+            Longitud = Longitud,
+            Nombre = Nombre,
+            Apellidos = Apellidos,
+            FotoVivienda = FotoVivienda,
+            CreatedBy = usuario,
         };
         return true;
     }
