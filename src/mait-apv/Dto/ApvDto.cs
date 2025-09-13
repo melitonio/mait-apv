@@ -18,6 +18,17 @@ public record ApvDto
     double Latitud,
     double Longitud,
     string? FotoVivienda,
+
+    string? Telefono,
+    string? Email,
+
+    string? Calle,
+    string? NumeroCalle,
+    string? Bloque,
+    string? Portal,
+    string? Escalera,
+    string? Piso,
+    string? Puerta,
     IEnumerable<LocalizacionDto> Localiaciones
 ) : IGetDto<Apv>
 {
@@ -29,6 +40,11 @@ public record ApvDto
 
     public static IGetDto<Apv> FromEntity(Apv entity)
     {
+        var localizaciones = entity.Localiaciones.Select(x => LocalizacionDto.FromEntity(x, out LocalizacionDto dto)
+            ? dto : throw new($"{x?.Nombre} no se pudo convertir a LocalizacionDto"));
+
+        var activeLocalization = localizaciones.FirstOrDefault(x => x.Activa);
+
         return new ApvDto
         (
             Id: entity.Id,
@@ -38,13 +54,23 @@ public record ApvDto
             IsActive: entity.IsEnabled,
             IsApproved: entity.IsApproved ?? false,
             NombreCompleto: entity.Nombre,
+            Telefono: entity.Telefono,
+            Email: entity.Email,
             EmergenciaNombre: entity.EmergenciaNombre,
             EmergenciaTelefono: entity.EmergenciaTelefono,
             EmergenciaRelacion: entity.EmergenciaRelacion,
             Latitud: entity.Latitud,
             Longitud: entity.Longitud,
             FotoVivienda: entity.FotoVivienda,
-            Localiaciones: entity.Localiaciones.Select(x => LocalizacionDto.FromEntity(x, out LocalizacionDto dto) ? dto : throw new($"{x?.Nombre} no se pudo convertir a LocalizacionDto"))
+            Localiaciones: localizaciones,
+
+            Calle: activeLocalization?.Calle ?? string.Empty,
+            NumeroCalle: activeLocalization?.Numero ?? string.Empty,
+            Bloque: activeLocalization?.Bloque ?? string.Empty,
+            Portal: activeLocalization?.Portal ?? string.Empty,
+            Escalera: activeLocalization?.Escalera ?? string.Empty,
+            Piso: activeLocalization?.Piso ?? string.Empty,
+            Puerta: activeLocalization?.Puerta ?? string.Empty 
         );
     }
 }

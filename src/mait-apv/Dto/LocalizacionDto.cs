@@ -16,6 +16,7 @@ public record LocalizacionDto
     string Portal,
     string Escalera,
     string Piso,
+    string Puerta,
     string CodigoPostal, // de la zona postal asociada a la dirección
     string Descripcion,
     bool Activa,
@@ -45,6 +46,7 @@ public record LocalizacionDto
                     Portal: entity.Portal,
                     Escalera: entity.Escalera,
                     Piso: entity.Piso,
+                    Puerta: entity.Puerta,
                     CodigoPostal: entity.CodigoPostal,
                     Descripcion: entity.Descripcion ?? string.Empty,
                     Activa: entity.Activa,

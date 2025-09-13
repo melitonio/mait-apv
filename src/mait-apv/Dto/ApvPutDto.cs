@@ -16,6 +16,9 @@ public record ApvPutDto(
     double Longitud,
     string? FotoVivienda,
 
+    string? Telefono,
+    string? Email,
+
     string? Calle,
     string? Numero,
     string? Bloque,
@@ -37,6 +40,9 @@ public record ApvPutDto(
         entity.FotoVivienda = FotoVivienda ?? entity.FotoVivienda;
         entity.UpdatedBy = usuario;
         entity.UpdatedAt = DateTimeOffset.Now;
+
+        entity.Telefono = Telefono ?? entity.Telefono;
+        entity.Email = Email ?? entity.Email;
     }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
