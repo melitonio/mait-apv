@@ -27,9 +27,6 @@ namespace maitapv.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Apellidos")
-                        .HasColumnType("text");
-
                     b.Property<DateTimeOffset?>("ApprovedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -58,6 +55,9 @@ namespace maitapv.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("DisabledBy")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
                         .HasColumnType("text");
 
                     b.Property<string>("EmergenciaNombre")
@@ -118,6 +118,9 @@ namespace maitapv.Migrations
 
                     b.Property<string>("TagsJson")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Telefono")
                         .HasColumnType("text");
 
                     b.Property<DateTimeOffset?>("UpdatedAt")
@@ -190,6 +193,10 @@ namespace maitapv.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Portal")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Puerta")
                         .IsRequired()
                         .HasColumnType("text");
 

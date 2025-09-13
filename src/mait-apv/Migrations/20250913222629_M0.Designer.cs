@@ -12,15 +12,15 @@ using Persistence;
 namespace maitapv.Migrations
 {
     [DbContext(typeof(ServiceDbContext))]
-    [Migration("20250828035322_M2")]
-    partial class M2
+    [Migration("20250913222629_M0")]
+    partial class M0
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.5")
+                .HasAnnotation("ProductVersion", "9.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -29,9 +29,6 @@ namespace maitapv.Migrations
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
-
-                    b.Property<string>("Apellidos")
-                        .HasColumnType("text");
 
                     b.Property<DateTimeOffset?>("ApprovedAt")
                         .HasColumnType("timestamp with time zone");
@@ -57,6 +54,15 @@ namespace maitapv.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("text");
 
+                    b.Property<DateTimeOffset?>("DisabledAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("DisabledBy")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
                     b.Property<string>("EmergenciaNombre")
                         .HasColumnType("text");
 
@@ -72,8 +78,8 @@ namespace maitapv.Migrations
                     b.Property<DateOnly?>("FechaBaja")
                         .HasColumnType("date");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
+                    b.Property<string>("FotoVivienda")
+                        .HasColumnType("text");
 
                     b.Property<bool?>("IsApproved")
                         .HasColumnType("boolean");
@@ -81,7 +87,10 @@ namespace maitapv.Migrations
                     b.Property<bool>("IsArchived")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("IsSuspended")
+                    b.Property<bool>("IsDisabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsEnabled")
                         .HasColumnType("boolean");
 
                     b.Property<double>("Latitud")
@@ -90,7 +99,7 @@ namespace maitapv.Migrations
                     b.Property<double>("Longitud")
                         .HasColumnType("double precision");
 
-                    b.Property<string>("Metadata")
+                    b.Property<string>("MetadataJson")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -110,26 +119,11 @@ namespace maitapv.Migrations
                     b.Property<Guid>("SerieId")
                         .HasColumnType("uuid");
 
-                    b.Property<DateTimeOffset?>("SuspendedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("SuspendedBy")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Tags")
+                    b.Property<string>("TagsJson")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset?>("UnarchivedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("UnarchivedBy")
-                        .HasColumnType("text");
-
-                    b.Property<DateTimeOffset?>("UnsuspendedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("UnsuspendedBy")
+                    b.Property<string>("Telefono")
                         .HasColumnType("text");
 
                     b.Property<DateTimeOffset?>("UpdatedAt")
@@ -185,7 +179,7 @@ namespace maitapv.Migrations
                     b.Property<double>("Longitud")
                         .HasColumnType("double precision");
 
-                    b.Property<string>("Metadata")
+                    b.Property<string>("MetadataJson")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -205,7 +199,11 @@ namespace maitapv.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Tags")
+                    b.Property<string>("Puerta")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TagsJson")
                         .IsRequired()
                         .HasColumnType("text");
 

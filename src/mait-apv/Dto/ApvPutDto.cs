@@ -14,14 +14,21 @@ public record ApvPutDto(
     string? EmergenciaRelacion,
     double Latitud,
     double Longitud,
-    string? FotoVivienda
+    string? FotoVivienda,
+
+    string? Calle,
+    string? Numero,
+    string? Bloque,
+    string? Portal,
+    string? Escalera,
+    string? Piso,
+    string? Puerta
 ) : IPutDto<Apv>
 {
     public void UpdateEntity(in Apv entity, string usuario)
     {
         entity.CodigoPostal = CodigoPostal ?? entity.CodigoPostal;
-        entity.Nombre = Nombre ?? entity.Nombre;
-        entity.Apellidos = Apellidos ?? entity.Apellidos;
+        entity.Nombre = (Nombre + " " + Apellidos).Trim() ?? entity.Nombre;
         entity.EmergenciaNombre = EmergenciaNombre ?? entity.EmergenciaNombre;
         entity.EmergenciaTelefono = EmergenciaTelefono ?? entity.EmergenciaTelefono;
         entity.EmergenciaRelacion = EmergenciaRelacion ?? entity.EmergenciaRelacion;

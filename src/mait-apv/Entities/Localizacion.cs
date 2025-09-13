@@ -12,6 +12,7 @@ public class Localizacion : BaseEntity
     public string Portal { get; set; } = string.Empty; // Portal o número de entrada
     public string Escalera { get; set; } = string.Empty; // Escalera del edificio
     public string Piso { get; set; } = string.Empty; // Piso del edificio
+    public string Puerta { get; set; } = string.Empty; // Puerta o unidad específica
     public string CodigoPostal { get; set; } = string.Empty; // de la zona postal asociada a la dirección
     public bool Activa { get; set; }
     public double Latitud { get; set; } // Latitud de la ubicación

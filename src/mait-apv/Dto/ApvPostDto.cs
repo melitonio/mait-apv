@@ -7,15 +7,24 @@ namespace Dto;
 public record ApvPostDto(
     string CodigoPostal,
     DateTime Fecha,
-    Guid SerieId,
     string? Nombre,
     string? Apellidos,
+    string? Telefono,
+    string? Email,
     string? EmergenciaNombre,
     string? EmergenciaTelefono,
     string? EmergenciaRelacion,
     double Latitud,
     double Longitud,
-    string? FotoVivienda
+    string? FotoVivienda,
+
+    string? Calle,
+    string? Numero,
+    string? Bloque,
+    string? Portal,
+    string? Escalera,
+    string? Piso,
+    string? Puerta
 ) : IPostDto<Apv>
 {
     public bool ToEntity(string usuario, out Apv entity, Guid? id = null)
@@ -25,16 +34,36 @@ public record ApvPostDto(
             Id = id ?? Guid.NewGuid(),
             CodigoPostal = CodigoPostal,
             Fecha = DateOnly.FromDateTime(Fecha),
-            SerieId = SerieId,
             EmergenciaNombre = EmergenciaNombre,
+            Telefono = Telefono,
+            Email = Email,
             EmergenciaTelefono = EmergenciaTelefono,
             EmergenciaRelacion = EmergenciaRelacion,
             Latitud = Latitud,
             Longitud = Longitud,
-            Nombre = Nombre,
-            Apellidos = Apellidos,
+            Nombre = (Nombre + " " + Apellidos).Trim(),
             FotoVivienda = FotoVivienda,
             CreatedBy = usuario,
+            Localiaciones =
+            [
+                new Localizacion
+                {
+                    Calle = Calle ?? string.Empty,
+                    Numero = Numero ?? string.Empty,
+                    Bloque = Bloque ?? string.Empty,
+                    Portal = Portal ?? string.Empty,
+                    Escalera = Escalera ?? string.Empty,
+                    Piso = Piso ?? string.Empty,
+                    Puerta = Puerta ?? string.Empty,
+                    CodigoPostal = CodigoPostal,
+                    Activa = true,
+                    Latitud = Latitud,
+                    Longitud = Longitud,
+                    Nombre = "Domicilio Principal",
+                    Tipo = "Principal",
+                    CreatedBy = usuario,
+                }
+            ]
         };
         return true;
     }

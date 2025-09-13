@@ -65,11 +65,11 @@ public class LocalizacionController(
 
             var localizaciones = (await _crudService.GetByFilterAsync(x => x.ApvId == apvId)).ToList();
 
-            if (localizaciones.Any(x => x.Nombre == dto.Nombre))
+            if (localizaciones.Any(x => x.Nombre == dto.Titulo))
             {
                 Response.StatusCode = StatusCodes.Status400BadRequest;
-                _logger.LogWarning("La localización '{Nombre}' ya existe en el apartado con ID: {Id}", dto.Nombre, apvId);
-                return new($"La localización '{dto.Nombre}' ya existe en el apartado con ID: {apvId}");
+                _logger.LogWarning("La localización '{Nombre}' ya existe en el apartado con ID: {Id}", dto.Titulo, apvId);
+                return new($"La localización '{dto.Titulo}' ya existe en el apartado con ID: {apvId}");
             }
 
             dto.ToEntity(GetUsername(), out var entity);

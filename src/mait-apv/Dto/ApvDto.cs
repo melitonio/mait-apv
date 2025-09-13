@@ -6,14 +6,12 @@ namespace Dto;
 public record ApvDto
 (
     Guid Id,
-    Guid SerieId,
     DateOnly Fecha,
     string? Numero,
     string? CodigoPostal,
     bool IsActive,
     bool IsApproved,
-    string? Nombre,
-    string? Apellidos,
+    string? NombreCompleto,
     string? EmergenciaNombre,
     string? EmergenciaTelefono,
     string? EmergenciaRelacion,
@@ -34,14 +32,12 @@ public record ApvDto
         return new ApvDto
         (
             Id: entity.Id,
-            SerieId: entity.SerieId,
             Fecha: entity.Fecha,
             Numero: entity.Numero,
             CodigoPostal: entity.CodigoPostal,
             IsActive: entity.IsEnabled,
             IsApproved: entity.IsApproved ?? false,
-            Nombre: entity.Nombre,
-            Apellidos: entity.Apellidos,
+            NombreCompleto: entity.Nombre,
             EmergenciaNombre: entity.EmergenciaNombre,
             EmergenciaTelefono: entity.EmergenciaTelefono,
             EmergenciaRelacion: entity.EmergenciaRelacion,

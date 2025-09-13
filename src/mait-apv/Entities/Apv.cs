@@ -19,11 +19,11 @@ public class Apv : BaseApprovable, INumberSequence
     public IEnumerable<Localizacion> Localiaciones { get; set; } = [];
 
     public Localizacion? Localizacion => Localiaciones.SingleOrDefault(x => x.Activa);
-    public static string DefaultNumero { get; } = $"apv-{DateTime.Now:yy-MM}-0000000";
+    public static string DefaultNumero { get; } = $"apv-{DateTime.Now:yy}-00000";
 
     public string? Nombre { get; set; }
-    public string? Apellidos { get; set; }
-    public string NombreCompleto => $"{Nombre} {Apellidos}".Trim();
+    public string? Telefono { get; set; }
+    public string? Email { get; set; }
 
 
     public string? EmergenciaNombre { get; set; }
