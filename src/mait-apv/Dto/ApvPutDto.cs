@@ -20,7 +20,7 @@ public record ApvPutDto(
     string? Email,
 
     string? Calle,
-    string? Numero,
+    string? NumeroCalle,
     string? Bloque,
     string? Portal,
     string? Escalera,

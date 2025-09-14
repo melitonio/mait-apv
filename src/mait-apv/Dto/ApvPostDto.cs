@@ -19,7 +19,7 @@ public record ApvPostDto(
     string? FotoVivienda,
 
     string? Calle,
-    string? Numero,
+    string? NumeroCalle,
     string? Bloque,
     string? Portal,
     string? Escalera,
@@ -49,7 +49,7 @@ public record ApvPostDto(
                 new Localizacion
                 {
                     Calle = Calle ?? string.Empty,
-                    Numero = Numero ?? string.Empty,
+                    Numero = NumeroCalle ?? string.Empty,
                     Bloque = Bloque ?? string.Empty,
                     Portal = Portal ?? string.Empty,
                     Escalera = Escalera ?? string.Empty,
