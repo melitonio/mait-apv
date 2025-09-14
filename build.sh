@@ -14,7 +14,7 @@ else
     docker buildx use mybuilder
 fi
 
-# Construir imagen de Docker (las dependencias y licencia se manejan dentro del contenedor)
+# Construir imagen de Docker (las dependencias y licencia se manejan dentro del contenedor) 
 docker buildx inspect --bootstrap
 
 docker buildx build \
