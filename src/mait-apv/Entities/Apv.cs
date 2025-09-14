@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Dto;
 using MAIT.Interfaces;
 
 namespace Entities;
@@ -17,6 +18,9 @@ public class Apv : BaseApprovable, INumberSequence
     public string? CodigoPostal { get; set; }      // Zona postal para apartados
     public Guid SerieId { get; set; }              // Serie documental para correspondencia
     public IEnumerable<Localizacion> Localiaciones { get; set; } = [];
+
+    [NotMapped]
+    public ZonaPostalDto? ZonaPostal { get; set; }
 
     public Localizacion? Localizacion => Localiaciones.SingleOrDefault(x => x.Activa);
     public static string DefaultNumero { get; } = $"apv-{DateTime.Now:yy}-00000";

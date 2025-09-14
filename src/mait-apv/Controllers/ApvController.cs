@@ -24,6 +24,7 @@ public partial class ApvController
     protected async override Task<Apv?> OnRead(Guid id)
     {
         var entity = await base.OnRead(id) ?? throw new($"No se ha encontrado el apartado con ID: {id}");
+        entity.ZonaPostal = await _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal!);
         entity.Localiaciones = await _localizacionService.GetByFilterAsync(l => l.ApvId == id) ?? [];
         return entity;
     }

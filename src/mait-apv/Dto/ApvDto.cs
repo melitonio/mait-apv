@@ -9,6 +9,7 @@ public record ApvDto
     DateOnly Fecha,
     string? Numero,
     string? CodigoPostal,
+    string? ZonaPostal,
     bool IsActive,
     bool IsApproved,
     string? NombreCompleto,
@@ -18,6 +19,8 @@ public record ApvDto
     double Latitud,
     double Longitud,
     string? FotoVivienda,
+
+    ZonaPostalDto? ZonaPostalDto,
 
     string? Telefono,
     string? Email,
@@ -63,6 +66,9 @@ public record ApvDto
             Longitud: entity.Longitud,
             FotoVivienda: entity.FotoVivienda,
             Localiaciones: localizaciones,
+
+            ZonaPostalDto: entity.ZonaPostal,
+            ZonaPostal: entity.ZonaPostal?.Zona,
 
             Calle: activeLocalization?.Calle ?? string.Empty,
             NumeroCalle: activeLocalization?.Numero ?? string.Empty,
