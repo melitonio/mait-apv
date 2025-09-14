@@ -16,7 +16,13 @@ fi
 
 # Construir imagen de Docker (las dependencias y licencia se manejan dentro del contenedor)
 docker buildx inspect --bootstrap
-docker buildx build --platform linux/amd64,linux/arm64 --push -t $IMAGE $CONTEXT_DIR
+
+docker buildx build \
+        --platform linux/amd64,linux/arm64 \
+        --push \
+        --progress=plain \
+        -t $IMAGE \
+        $CONTEXT_DIR
 
 # Verificar si la construcción fue exitosa
 if [ $? -ne 0 ]; then
