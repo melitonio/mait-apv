@@ -3,7 +3,9 @@ set -e
 
 APP_NAME="$1"
 TAG="$2"
+
 IMAGE="registry.mait.gq/${APP_NAME}:${TAG}"
+CONTEXT_DIR="./src/mait-apv/"
 
 # Crear o usar el builder existente
 if ! docker buildx inspect mybuilder > /dev/null 2>&1; then
@@ -14,7 +16,7 @@ fi
 
 # Construir imagen de Docker (las dependencias y licencia se manejan dentro del contenedor)
 docker buildx inspect --bootstrap
-docker buildx build --platform linux/amd64,linux/arm64 --push -t $IMAGE ./src/mait-apv/
+docker buildx build --platform linux/amd64,linux/arm64 --push -t $IMAGE $CONTEXT_DIR
 
 # Verificar si la construcción fue exitosa
 if [ $? -ne 0 ]; then
