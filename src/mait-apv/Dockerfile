@@ -41,7 +41,7 @@ RUN dotnet restore "mait-apv.csproj" \
 
 # Copiar código fuente
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/." 
 
 # Build con configuraciones optimizadas
 RUN dotnet build "mait-apv.csproj" \
