@@ -47,16 +47,14 @@ WORKDIR "/src/."
 RUN dotnet build "mait-apv.csproj" \
     -c Release \
     -o /app/build \
-    --no-restore \
-    --verbosity normal
+    --no-restore
 
 FROM build AS publish
 # Publish con configuraciones optimizadas
 RUN dotnet publish "mait-apv.csproj" \
     -c Release \
     -o /app/publish \
-    --no-restore \
-    --verbosity normal
+    --no-restore
 
 FROM base AS final
 WORKDIR /app

@@ -20,7 +20,6 @@ docker buildx inspect --bootstrap
 docker buildx build \
         --platform linux/amd64,linux/arm64 \
         --push \
-        --progress=plain \
         -t $IMAGE $CONTEXT_DIR
 
 # Verificar si la construcción fue exitosa
@@ -29,4 +28,4 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Imagen de Docker construida y subida exitosamente: $IMAGE"
+echo "✅ Imagen multiplataforma construida y publicada: $IMAGE"
