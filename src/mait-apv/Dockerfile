@@ -15,26 +15,11 @@ HEALTHCHECK --interval=10s --timeout=3s --retries=3 --start-period=30s \
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Configurar variables de entorno para ARM64 antes del restore
-ENV DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT=false
-ENV DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=false
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
-ENV DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
-ENV NUGET_HTTP_CACHE_PATH=/tmp/nuget-cache
-
-# Crear cache directory para NuGet
-RUN mkdir -p /tmp/nuget-cache
-
-# Configurar fuentes de NuGet de forma explícita con HTTP/1.1
-RUN dotnet nuget remove source nuget.org || true
-RUN dotnet nuget add source https://api.nuget.org/v3/index.json --name nuget.org
-
 # Copiar y restaurar dependencias primero (mejor caching)
 COPY ["mait-apv.csproj", "."]
 
 # Restore con configuraciones optimizadas para ARM64
 RUN dotnet restore "mait-apv.csproj" \
-    --verbosity normal \
     --no-cache \
     --force \
     --disable-parallel

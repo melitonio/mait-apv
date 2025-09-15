@@ -18,7 +18,7 @@ fi
 docker buildx inspect --bootstrap
 
 docker buildx build \
-        --platform linux/amd64,linux/arm64 \
+        --platform linux/amd64 \
         --push \
         -t $IMAGE $CONTEXT_DIR
 
@@ -29,3 +29,5 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "✅ Imagen multiplataforma construida y publicada: $IMAGE"
+
+#         --platform linux/amd64,linux/arm64 \
