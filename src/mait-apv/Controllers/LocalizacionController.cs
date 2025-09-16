@@ -22,7 +22,7 @@ public class LocalizacionController(
 
     protected override Task OnCreateAsync(Localizacion entity, LocalizacionPostDto dto)
     {
-        entity.CodigoPostal = dto.CodigoPostal;
+        entity.CodigoPostal = dto.CodigoPostal ?? string.Empty;
         if (!string.IsNullOrEmpty(entity.CodigoPostal))
         {
             var zonaPostal = _zonaPostalService.GetZonaPostalAsync(entity.CodigoPostal).GetAwaiter().GetResult();
