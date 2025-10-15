@@ -32,6 +32,7 @@ builder.Services.AddSingleton<IDataService, DataService<ServiceDbContext>>();
 builder.Services.AddSingleton<IApvService, ApvService>();
 builder.Services.AddSingleton<ZonaPostalService>();
 builder.Services.AddSingleton<LocalizacionService>();
+builder.Services.AddSingleton<NotificacionService>();
 
 builder.Services.AddDbContext<ServiceDbContext>(options =>
 {

@@ -8,6 +8,7 @@ public class ServiceDbContext(DbContextOptions<ServiceDbContext> options) : Empt
 {
     public DbSet<Apv> Aparatados { get; set; }
     public DbSet<Localizacion> Localizaciones { get; set; }
+    public DbSet<Notificacion> Notificaciones { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

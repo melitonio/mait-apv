@@ -1,5 +1,5 @@
 # Dockerfile optimizado para ASP.NET con mejor soporte ARM64
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
 EXPOSE 8080
 
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 HEALTHCHECK --interval=10s --timeout=3s --retries=3 --start-period=30s \
     CMD curl -f http://localhost:8080/healthz || exit 1
 
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Copiar y restaurar dependencias primero (mejor caching)
